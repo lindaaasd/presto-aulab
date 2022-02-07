@@ -1,1 +1,10 @@
 @import'~bootstrap/dist/css/bootstrap';
+
+:root {
+    --main-dark-blue: #0F3C64;
+    --main-orange: #E1785F;
+    --main-red: #FF6969;
+    --main-light-blue: #60B1D2;
+    --main-yellow: #FFE66E;
+
+}

@@ -23,9 +23,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fas fa-user"></i> </a>
+            <a class="nav-link" href="{{route('login')}}"> <i class="fas fa-user"></i> </a>
           </li>
+          <li class="text-center"><a class="nav-link  fw-bold text-danger" href=" {{ route('logout') }}"
+            onclick="event.preventDefault(); document.querySelector('#logout-form').submit();">Logout</a></li>
         </ul>
       </div>
     </div>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+      @csrf
+  </form>
   </nav>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-     {{-- GOOGLE FONTS  --}}
+    {{-- GOOGLE FONTS  --}}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,12 @@
             {{$slot}}
         </div>
     </section>
-  
+
 
 
     <x-footer/>
 
-    
+
     <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

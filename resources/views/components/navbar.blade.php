@@ -15,6 +15,7 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" href="#">Categoria</a></li>
+        <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="#">Un'altra categoria</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="#">Categoria</a></li>

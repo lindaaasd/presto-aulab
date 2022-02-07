@@ -11281,4 +11281,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
 
+.footer-body {
+    background-color: var(--main-dark-blue);
+}
+
+.social {
+    color: white;
+}
+:root {
+    --main-dark-blue: #0F3C64;
+    --main-orange: #E1785F;
+    --main-red: #FF6969;
+    --main-light-blue: #60B1D2;
+    --main-yellow: #FFE66E;
+
+}

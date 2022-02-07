@@ -1,5 +1,6 @@
 @import'~bootstrap/dist/css/bootstrap';
 
+@import'style';
 :root {
     --main-dark-blue: #0F3C64;
     --main-orange: #E1785F;

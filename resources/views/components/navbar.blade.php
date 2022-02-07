@@ -28,8 +28,9 @@
             <a class="nav-link" href="{{route('login')}}"><i class="fas fa-user"></i> </a>
           </li>
           @else
+          <li class="text-center">{{Auth::user()->name}}</li>
           <li class="text-center"><a class="nav-link  fw-bold text-danger" href=" {{ route('logout') }}"
-            onclick="event.preventDefault(); document.querySelector('#logout-form').submit();"> {{Auth::user()->name}} Logout</a></li>
+            onclick="event.preventDefault(); document.querySelector('#logout-form').submit();"> Logout</a></li>
         </ul>
       </div>
     </div>

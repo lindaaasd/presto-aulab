@@ -1,11 +1,114 @@
 @import'~bootstrap/dist/css/bootstrap';
-
 @import'style';
+@import'mediaquery';
+
 :root {
     --main-dark-blue: #0F3C64;
     --main-orange: #E1785F;
     --main-red: #FF6969;
     --main-light-blue: #60B1D2;
     --main-yellow: #FFE66E;
+    --light-gradient: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
+    --box-shadow-2: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    --box-shadow-1: #ff696966 0px 5px, #ff69694d 0px 10px, #ff696933 0px 15px, #ff69691a 0px 20px, #ff69690d 0px 25px;
+}
+
+.nav-box {
+    box-shadow: var(--box-shadow-2);
+}
+
+.nav-search {
+    display: flex;
+    position:static;
+    float:none;
+    flex: 1 1 auto;    
+    padding: 10px 4px 10px 3px;
+    height: 60px;
+    width: 500px;
+}
+
+.category-btn { background: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
 
 }
+
+.category-btn:not([disabled]):focus {
+    box-shadow: 0 0 .15rem rgba(0, 0, 0, 0.5);
+  }
+  
+.category-btn:not([disabled]):hover {
+    box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5);
+  }
+
+.dropdown-menu {
+    background: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
+    border: 0;
+    border-radius: 12px;
+  }
+
+.dropdown-item {
+      color: white;
+      background: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
+  }
+
+.search-btn {
+  background: linear-gradient(to bottom right, var(--main-red), var(--main-orange));
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.search-btn:not([disabled]):focus {
+  box-shadow: 0 0 .15rem rgba(0, 0, 0, 0.5);
+}
+
+.search-btn:not([disabled]):hover {
+  box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5);
+}
+
+form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--main-orange);
+    outline: 0;
+    box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5);
+}
+
+.a-nav {
+    text-decoration: none;  
+    color: var(--main-dark-blue);
+    padding-right: 15px;
+}
+
+-a-nav:hover{
+    font-size: x-large;
+}
+

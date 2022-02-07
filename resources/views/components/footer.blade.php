@@ -65,7 +65,7 @@
                     <i class="fab fa-youtube fs-2 px-4"></i>
                </div>
                <div class="col-12 justify-content-center d-flex">
-                <img src="./media/logo.png" alt="logo" class="img-fluid">
+                <img src="https://assets.website-files.com/5ec440af4659932990a1020c/6126238e144f7970c00d7c57_60f17a27f09c3f9cecf7ef53_footer-avatar.png" alt="logo" class="img-fluid">
                </div>
             </div>
         </div>

@@ -1,0 +1,23 @@
+
+@media only screen and (max-width: 667px) {
+    .nav-logo {
+        width: 100%;
+    }
+    .nav-cat {
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+    }
+
+    .nav-search {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .nav-login {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

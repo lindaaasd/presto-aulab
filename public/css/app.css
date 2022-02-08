@@ -11647,10 +11647,45 @@ a {
     position: relative;
     z-index: 1; }
 
-.category-image {
-    width: 120px;
-    right: 33px;
-    bottom: -95px;
+.category-image-immobili {
+    width: 200px;
+    margin-top:50px;
+    overflow: visible;
+  
+}
+
+.category-image-elettronica {
+    width: 130px;
+    left: 100px;
+  
+}
+
+.category-image-lavoro {
+    width: 130px;
+    margin-left: 30px;  
+}
+
+.category-image-sport {
+    width: 200px;
+    margin-left: 10px;  
+    margin-top: 60px;
+}
+
+.category-image-musica {
+    width: 250px;
+    rotate: x 90deg;
+}
+
+.category-image-videogiochi {
+    width: 100px;
+}
+
+.category-image-vinili {
+    width: 100px;
+}
+
+.category-image-artigianato {
+    width: 80px;
 }
 
 .category-elettronica {

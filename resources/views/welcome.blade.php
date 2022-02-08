@@ -28,7 +28,7 @@
                             <div class="category-count">
                                 +340.000 annunci
                             </div>
-                            <img class="category-image"src=""  alt="immobili">
+                            <img class="category-image-immobili"src="/media/immobili.png"  alt="immobili">
                         </a>
                         <a class="category-elettronica category"href="">
                             <h3 class="category-title">
@@ -37,7 +37,7 @@
                             <div class="category-count">
                                 +150.000 annunci
                             </div>
-                            <img class="img-fluid category-image"src="/media/elettronica.png" alt="elettronica">
+                            <img class="category-image-elettronica"src="/media/elettronica.png" alt="elettronica">
                         </a>
                     </div>
                 </div>
@@ -46,12 +46,12 @@
                         <a class="category category-lavoro" href="">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
-                            <img class="category-image" src="" alt="">
+                            <img class="category-image-lavoro" src="/media/lavoro.png" alt="">
                         </a>
                         <a class="category category-sport"  href="">
                             <h3 class="category-title">Sport</h3>
                             <div class="category-count"> +500.000 annunci </div>
-                            <img class="category-image" src="" alt="">
+                            <img class="category-image-sport" src="/media/sport.png" alt="">
                         </a>
 
                     </div>
@@ -60,7 +60,7 @@
                     <a class="category category-musica" href="">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
-                        <img class="category-image" src="" alt="">
+                        <img class="category-image-musica" src="/media/musica.png" alt="">
                     </a>
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-4">
@@ -69,21 +69,21 @@
                             <a class="category category-videogiochi"href="">
                                 <h3 class="category-title">Videogiochi</h3>
                             <div class="category-count"> +50.000 annunci </div>
-                            <img class="category-image" src="" alt="">
+                            <img class="category-image-videogiochi" src="/media/videogiochi.png" alt="">
                             </a>
                         </div>
                         <div class="col-12 col-md-6">
                             <a class="category category-vinili" href="">
                                 <h3 class="category-title">Vinili</h3>
                                 <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image" src="" alt="">
+                                <img class="category-image-vinili" src="/media/vinili.png" alt="">
                             </a>
                         </div>
                         <div class="col-12">
                             <a class="category category-artigianato" href="">
                                 <h3 class="category-title">Artigianato</h3>
                                 <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image" src="" alt="">
+                                <img class="category-image" src="/media/artigianato.png" alt="">
                             </a>
                         </div>
                     </div>

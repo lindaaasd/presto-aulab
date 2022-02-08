@@ -18,7 +18,7 @@
  
  {{-- SEZIONE PRESENTAZIONE DEGLI ANNUNCI --}}
         <section class="container-fluid">
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
                         <a class="category-immobili category" href=""> 
@@ -89,6 +89,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+    </div>
         </section>
 
 

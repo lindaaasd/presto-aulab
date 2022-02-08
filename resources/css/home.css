@@ -6,23 +6,22 @@ a {
 .cat-col{
     flex-direction: column;
     height: 500px;
-    padding-right: 10px;
 }
+
 .cat-col-1 {
-    margin-bottom: 20px;
-    padding-left: 30px;
+    width:19%;
 }
 
 .cat-col-2 {
-    margin-bottom: 20px;
+    width:19%;
 }
-
 .cat-col-3 {
-    margin-bottom: 20px;
+    width: 19%;
 }
+.cat-col-4{
+    width: 25%;
+    margin-left: 35px;
 
-.cat-col-4 {
-    margin-bottom: 20px;
 }
 
 .category {
@@ -30,12 +29,21 @@ a {
     padding: 20px 17px;
 }
 
+.cat-small-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
+.category-wrapper {
+    margin: 60px;
+}
+
 .category-immobili {
     background-color: #D2FD61;
     color: var(--main-dark-blue)!important;
-    flex-basis: 310px;
-    height: 300px;
-    margin-bottom: 10px;
+    height: 350px;
+    width: 220px;
+   margin-bottom: 20px;
 }
 
 .category-title {
@@ -60,7 +68,8 @@ a {
 .category-elettronica {
     background-color: var(--main-light-blue);
     color: #fff!important;
-    flex-grow: 1;
+    height:150px;
+    width: 220px;
 }
 
 .City__img, .category {
@@ -72,55 +81,45 @@ a {
 .category-lavoro {
     background-color: #FF89C2;
     color: #670A6F!important;
-    flex-grow: 1;
-    margin: 30px;
     height: 150px;
-    width: 100px;
+    width: 220px;
+    margin-bottom: 20px;
 }
 
 .category-sport {
     background-color: #FD6C67;
-    color: #A31745!important;
-    flex-basis: 310px;
-    height: 250px;
-    margin: 30px;
-    margin-top: 0;
+    color: #3d282f!important;
+    height: 350px;
+    width: 220px;
 }
 
 .category-musica {
     background-color: #385EF9;
     color: #A3FBFF!important;
-    flex-basis: 100%;
-    height: 440px;
-    margin: 30px;
-}
+    height: 520px;
+    width: 250px;
+}   
 
 .category-artigianato {
     background-color: #F49709;
     color: #A31745!important;
-    flex-basis: 310px;
-    height: 300px;
-    margin: 30px;
+    height: 350px;
+    width: 310px;
+    margin-top: 15px;
 
 }
 
 .category-videogiochi {
     background-color: #13C1AC;
     color: #fff!important;
-    flex-basis: 100%;
     height: 150px;
-    margin-top: 20px;
+    width: 150px;
+
 }
 
 .category-vinili {
     background-color: #FF89C2;
     color: #670A6F!important;
-    flex-basis: 100%;
     height: 150px;
-    margin-top:20px;
-}
-
-.cat-small-wrapper {
-    display: flex;
-    flex-grow: 1;
+    width: 150px;
 }

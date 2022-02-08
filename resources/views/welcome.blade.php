@@ -16,9 +16,84 @@
         </div>
     @endif
  
+ {{-- SEZIONE PRESENTAZIONE DEGLI ANNUNCI --}}
+        <section class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-6 col-md-3 cat-col cat-col-1">
+                    <div class="row">
+                        <a class="category-immobili category" href=""> 
+                            <h3 class="category-title">
+                                Immobili
+                            </h3>
+                            <div class="category-count">
+                                +340.000 annunci
+                            </div>
+                            <img class="category-image"src=""  alt="immobili">
+                        </a>
+                        <a class="category-elettronica category"href="">
+                            <h3 class="category-title">
+                                Elettronica
+                            </h3>
+                            <div class="category-count">
+                                +150.000 annunci
+                            </div>
+                            <img class="img-fluid category-image"src="/media/elettronica.png" alt="elettronica">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 cat-col cat-col-2">
+                    <div class="row">
+                        <a class="category category-lavoro" href="">
+                            <h3 class="category-title">Lavoro</h3>
+                            <div class="category-count"> +300.000 annunci </div>
+                            <img class="category-image" src="" alt="">
+                        </a>
+                        <a class="category category-sport"  href="">
+                            <h3 class="category-title">Sport</h3>
+                            <div class="category-count"> +500.000 annunci </div>
+                            <img class="category-image" src="" alt="">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 cat-col cat-col-3">
+                    <a class="category category-musica" href="">
+                        <h3 class="category-title">Musica</h3>
+                        <div class="category-count"> +50.000 annunci </div>
+                        <img class="category-image" src="" alt="">
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 cat-col cat-col-4">
+                    <div class="row cat-small-wrapper">
+                        <div class="col-12 col-md-6">
+                            <a class="category category-videogiochi"href="">
+                                <h3 class="category-title">Videogiochi</h3>
+                            <div class="category-count"> +50.000 annunci </div>
+                            <img class="category-image" src="" alt="">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <a class="category category-vinili" href="">
+                                <h3 class="category-title">Vinili</h3>
+                                <div class="category-count"> +50.000 annunci </div>
+                                <img class="category-image" src="" alt="">
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="category category-artigianato" href="">
+                                <h3 class="category-title">Artigianato</h3>
+                                <div class="category-count"> +50.000 annunci </div>
+                                <img class="category-image" src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
-<section class="container">
+{{-- <section class="container">
     <div class="row">
         <div class="col-12">
             <section class="container">
@@ -73,4 +148,6 @@
         </div>
     </div>
 </section>
+ --}}
+
 </x-layout>

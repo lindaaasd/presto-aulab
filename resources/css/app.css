@@ -2,6 +2,7 @@
 @import'style';
 @import'mediaquery';
 @import'card';
+@import'home';
 
 :root {
     --main-dark-blue: #0F3C64;
@@ -112,4 +113,3 @@ form-control:focus {
 -a-nav:hover{
     font-size: x-large;
 }
-

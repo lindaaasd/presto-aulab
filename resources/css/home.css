@@ -1,0 +1,126 @@
+a {
+    text-decoration: none;
+    color: var(--main-dark-blue);
+}
+
+.cat-col{
+    flex-direction: column;
+    height: 500px;
+    padding-right: 10px;
+}
+.cat-col-1 {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.cat-col-2 {
+    margin-bottom: 20px;
+}
+
+.cat-col-3 {
+    margin-bottom: 20px;
+}
+
+.cat-col-4 {
+    margin-bottom: 20px;
+}
+
+.category {
+    position: relative;
+    padding: 20px 17px;
+}
+
+.category-immobili {
+    background-color: #D2FD61;
+    color: var(--main-dark-blue)!important;
+    flex-basis: 310px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.category-title {
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.category-count {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.05em;
+    position: relative;
+    z-index: 1; }
+
+.category-image {
+    width: 120px;
+    right: 33px;
+    bottom: -95px;
+}
+
+.category-elettronica {
+    background-color: var(--main-light-blue);
+    color: #fff!important;
+    flex-grow: 1;
+}
+
+.City__img, .category {
+    display: block;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.category-lavoro {
+    background-color: #FF89C2;
+    color: #670A6F!important;
+    flex-grow: 1;
+    margin: 30px;
+    height: 150px;
+    width: 100px;
+}
+
+.category-sport {
+    background-color: #FD6C67;
+    color: #A31745!important;
+    flex-basis: 310px;
+    height: 250px;
+    margin: 30px;
+    margin-top: 0;
+}
+
+.category-musica {
+    background-color: #385EF9;
+    color: #A3FBFF!important;
+    flex-basis: 100%;
+    height: 440px;
+    margin: 30px;
+}
+
+.category-artigianato {
+    background-color: #F49709;
+    color: #A31745!important;
+    flex-basis: 310px;
+    height: 300px;
+    margin: 30px;
+
+}
+
+.category-videogiochi {
+    background-color: #13C1AC;
+    color: #fff!important;
+    flex-basis: 100%;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.category-vinili {
+    background-color: #FF89C2;
+    color: #670A6F!important;
+    flex-basis: 100%;
+    height: 150px;
+    margin-top:20px;
+}
+
+.cat-small-wrapper {
+    display: flex;
+    flex-grow: 1;
+}

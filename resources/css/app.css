@@ -1,6 +1,7 @@
 @import'~bootstrap/dist/css/bootstrap';
 @import'style';
 @import'mediaquery';
+@import'card';
 
 :root {
     --main-dark-blue: #0F3C64;
@@ -9,7 +10,7 @@
     --main-light-blue: #60B1D2;
     --main-yellow: #FFE66E;
     --light-gradient: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
-    --box-shadow-2: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    --box-shadow-2: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
     --box-shadow-1: #ff696966 0px 5px, #ff69694d 0px 10px, #ff696933 0px 15px, #ff69691a 0px 20px, #ff69690d 0px 25px;
 }
 

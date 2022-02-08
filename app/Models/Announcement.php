@@ -14,6 +14,7 @@ class Announcement extends Model
         'description',
         'img',
         'user_id',
+        'category_id',
     ];
     
     public function user(){

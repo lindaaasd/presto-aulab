@@ -19,24 +19,20 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="nav-search col-12 col-md-6 justify-content-center">
-                <form class="d-flex ms-5 w-100">
+            <div class="nav-search col-12 col-md-6 justify-content-start">
+                <form class="d-flex ms-5 w-50">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn search-btn" type="submit">Search</button>
                 </form>
             </div>
             @guest
-                <div class="nav-login col-4 col-md-2 d-flex justify-content-end">
+                <div class="nav-login col-4 col-md-2 d-flex">
                     <a class="a-nav nav-link" href="{{ route('login') }}"> Accedi <i class="fas fa-user"></i> </a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        </li>
                     @else
-                        <li class="text-center">{{ Auth::user()->name }}</li>
-                        <li class="text-center"><a class="fw-bold text-danger" href=" {{ route('logout') }}"
+                    <div class="nav-item ">{{ Auth::user()->name }}</div>
+                    <div class="nav-item "><a class="fw-bold" href=" {{ route('logout') }}"
                                 onclick="event.preventDefault(); document.querySelector('#logout-form').submit();">
-                                Logout</a></li>
-                    </ul>
+                                Logout</a></div>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

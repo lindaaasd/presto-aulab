@@ -23,7 +23,7 @@
                         <label for="exampleInputText" class="form-label">description</label>
                         <textarea name='description' value="{{ old('description') }}"></textarea>
                     </div>
-                    <select name="categories">
+                    <select name="category" >
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">
                                 {{ $category->name }}

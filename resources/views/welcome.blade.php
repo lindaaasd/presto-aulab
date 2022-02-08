@@ -15,28 +15,62 @@
             </ul>
         </div>
     @endif
-    <div class="container">
-        @foreach ($announcements as $announcement)
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">
-                            {{ $announcement->title }}
-                        </div>
+ 
+
+    {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <section class="container">
+                <div class="row">
+                    @foreach ($announcements as $announcement)
+                    <div class="col-12 col-md-6 d-flex justify-content-end">
+                        <section class="card-area">
+                            <!-- Card: City -->
+                            <section class="card-section">
+                                <div class="card">
+                                    <div class="flip-card">
+                                        <div class="flip-card__container">
+                                            <div class="card-front">
+                                                <div class="card-front__tp card-front__tp--city">
+                                               <h2 class="card-front__heading">
+                                                  {{$announcement->title}}
+                                               </h2>
+                                            <p class="card-front__text-price">
+                                              {{$announcement->price}} 
+                                            </p>
+                                                </div>
+                                                <div class="card-front__bt">
+                                                    <p class="card-front__text-view card-front__text-view--city">
+                                                        Dettagli annuncio
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <img src="{{Storage::url($announcement->img)}}" alt="ad-img" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="inside-page">
+                                        <div class="inside-page__container">
+                                            <h3 class="inside-page__heading inside-page__heading--city">
+                                                {{$announcement->title}}
+                                            </h3>
+                                            <p class="inside-page__text">
+                                                {{$announcement->description}}
+                                            </p>
+                                            <a href="#" class="inside-page__btn inside-page__btn--city"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
                     </div>
-                    <div class="card-body">
-                        <p>
-                            <img class="img-fluid" width="90" height="90" src="https://via.placeholder.com/150" alt="immagine annuncio" class="rounded float-right">
-                            {{ $announcement->description }}
-                        </p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <address>{{ $announcement->created_at->format('d/m/Y') }}</address>
-                        <h4>Category: <a href="">{{ $announcement->category->name }}</a></h4>
-                        <h4>{{ $announcement->user->name }}</h4>
-                    </div>
+                    @endforeach
                 </div>
-            </div>
-        @endforeach
+            </section>
+        </div>
     </div>
+</section>
 </x-layout>

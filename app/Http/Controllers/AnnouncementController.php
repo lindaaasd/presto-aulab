@@ -14,15 +14,16 @@ class AnnouncementController extends Controller
         $this->middleware('auth');
     }
 
-    // public function indexAnnouncement()
-    // {
-    //     $announcements = Announcement::all();
-    //     return view('announcements.index_announcement', compact('announcements'));
-    // }
+    public function indexAnnouncement()
+    {
+       
+        return view('announcements.index_announcement');
+    }
 
 
     public function formAnnouncement()
     {
+        // $categories = Category::all('name');
         return view('announcements.form_announcements');
     }
 
@@ -35,9 +36,8 @@ class AnnouncementController extends Controller
             'img'=>$request->file('img')->store('public/img'),
             'category_id'=>$request->category,
         ]);
+        // dd($request->category);
 
-        
-        
         return redirect (route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');
         }
 

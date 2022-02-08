@@ -23,7 +23,8 @@ class AnnouncementController extends Controller
 
     public function formAnnouncement()
     {
-        return view('announcements.form_announcements');
+        $categories= Category::all();
+        return view('announcements.form_announcements', compact('categories'));
     }
 
     public function createAnnouncement(Request $request)
@@ -33,8 +34,14 @@ class AnnouncementController extends Controller
             'price'=>$request->price,
             'description'=>$request->description,
             'img'=>$request->file('img')->store('public/img'),
+            'category_id'=>$request->category,
         ]);
 
-        return redirect(route('announcement.index'))->with('status', 'annuncio inserito correttamente');
+        
+        
+        return redirect (route('announcement.index'))
+        ;
+        }
+
     }
-}
+

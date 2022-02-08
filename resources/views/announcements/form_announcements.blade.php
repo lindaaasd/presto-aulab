@@ -16,6 +16,15 @@
                         <label for="exampleInputText" class="form-label">description</label>
                         <textarea  name='description' value="{{old('description')}}"></textarea>
                     </div>
+                        <select name="categories">
+                            @foreach ($categories as $category)    
+                                <option value="{{$category->id}}">
+                                    {{$category->name}}
+                                </option>
+                            @endforeach
+                        </select>
+                            
+                    
                     <input type="file" name="img">
                     <button type="submit" class="btn rounded-pill btn-danger">inserisci</button>
                 </form>

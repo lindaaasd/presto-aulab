@@ -12,7 +12,7 @@ class Category extends Model
         'name',
     ];
 
-    // public function announcements(){
-    //     return $this->hasMany(Announcement::class);
-    // }
+    public function ads(){
+        return $this->hasMany(Announcement::class);
+    }
 }

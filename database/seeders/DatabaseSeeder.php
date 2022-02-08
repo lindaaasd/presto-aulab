@@ -18,6 +18,14 @@ class DatabaseSeeder extends Seeder
         $categories= [
             'automobili',
             'elettronica',
+            'immobili',
+            'lavoro',
+            'casalinghi',
+            'sport',
+            'musica',
+            'artigianato',
+            'giardinaggio',
+            'collezionismo',
             
         ];
         foreach ($categories as $category){

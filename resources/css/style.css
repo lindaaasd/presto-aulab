@@ -8,3 +8,13 @@
     background-color: var(--main-dark-blue);
     color: white;
 }
+
+
+.user-name{
+    font-size: large;
+    color: var(--main-dark-blue);
+}
+
+.dropdown{
+    list-style: none;
+}

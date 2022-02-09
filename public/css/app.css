@@ -11293,6 +11293,15 @@ textarea.form-control-lg {
 }
 
 
+.user-name{
+    font-size: large;
+    color: var(--main-dark-blue);
+}
+
+.dropdown{
+    list-style: none;
+}
+
 @media only screen and (max-width: 667px) {
     .nav-logo {
         width: 100%;

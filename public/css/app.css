@@ -11591,6 +11591,8 @@ a {
     color: var(--main-dark-blue);
 }
 
+/* CATEGORIE */
+
 .cat-col{
     flex-direction: column;
     height: 500px;
@@ -11745,6 +11747,37 @@ a {
     color: #670A6F!important;
     height: 150px;
     width: 150px;
+}
+
+/* ULTIMI 5 ANNUNCI */
+
+.card-annunci {
+    color: var(--main-dark-blue)!important;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 0;
+    border-radius: 40px;
+    background-color: #60B1D24d;
+}
+
+.card-annunci:hover
+ {
+    background-color: #60B1D266;
+}
+
+.card-titolo {
+    font-size: x-large;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.card-prezzo {
+    font-size: larger;
+}
+.img-ads{
+    margin-bottom: 10px;
 }
 
 :root {

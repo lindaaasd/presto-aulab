@@ -27,10 +27,7 @@
     <x-navbar/>
 
     <section>
-        <div class="vh-100">
-
             {{$slot}}
-        </div>
     </section>
 
 

@@ -1,11 +1,6 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center mt-5 ">
-                <a class="btn btn-danger rounded-pill" href="{{ route('announcement.form') }}">inserisci annuncio</a>
-            </div>
-        </div>
-    </div>
+
+<main class="">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -15,9 +10,33 @@
             </ul>
         </div>
     @endif
+
+    {{-- MASTHEAD --}}
+    <section class="container-fluid p-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="row">
+                    <div>
+                        <h1> Presto </h1>
+                    </div>
+                    <div>
+                        <h3> something inspirational and buy worthy </h3>
+                    </div>
+                    <div class="">
+                        <a class="btn btn-danger rounded-pill" href="{{ route('announcement.form') }}">inserisci annuncio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="https://assets.website-files.com/5ec440af4659932990a1020c/6126238e144f7970c00d7c57_60f17a27f09c3f9cecf7ef53_footer-avatar.png" alt="">
+            </div>
+        </div>
+    </section>
  
  {{-- SEZIONE PRESENTAZIONE DEGLI ANNUNCI --}}
-        <section class="container-fluid">
+        <section class="container-fluid py-5">
+            <h1 class="text-center"> Le nostre categorie </h1>
+            <h2 class="text-center"> Lasciati ispirare dalle categorie più ricercate su Presto.it </h2>
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
@@ -89,10 +108,24 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </div>
         </section>
+
+    {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI  --}}
+
+<section class="container-fluid p-5">
+<h1 class="text-center py-5"> I nostri ultimmi annunci </h1>
+<div class="row align-items-center justify-content-center">
+    @foreach ($announcements as $announcement)
+    <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
+       <img class="rounded-pill" src="https://via.placeholder.com/150" alt="">
+       <h2 class="card-titolo"> {{$announcement->title}} </h2>
+       <h3 class="card-prezzo"> {{$announcement ->price}} </h3>
+       <p class="text-center"> {{$announcement ->description}}</p>
+    </div>
+    @endforeach
+</div>
+
+</section>
 
 
     {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
@@ -153,4 +186,5 @@
 </section>
  --}}
 
+</main>
 </x-layout>

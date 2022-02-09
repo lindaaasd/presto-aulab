@@ -35,14 +35,14 @@
             </div>
         </section>
 
-        {{-- SEZIONE PRESENTAZIONE DEGLI ANNUNCI --}}
+        {{-- SEZIONE PRESENTAZIONE DELLE CATEGORIE --}}
         <section class="container-fluid py-5">
             <h1 class="section-title text-center"> Le nostre categorie </h1>
             <h2 class="text-center"> Lasciati ispirare dalle categorie più ricercate su Presto.it </h2>
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
-                        <a class="category-immobili category" href="{{route('announcement.category', ['id'=>$announcement->category->id])}}">
+                        <a class="category-immobili category" href="{{route('announcement.category', 3)}}">
                             <h3 class="category-title">
                                 Immobili
                             </h3>
@@ -51,7 +51,7 @@
                             </div>
                             <img class="category-image-immobili" src="/media/immobili.png" alt="immobili">
                         </a>
-                        <a class="category-elettronica category" href="">
+                        <a class="category-elettronica category" href="{{route('announcement.category', 2)}}">
                             <h3 class="category-title">
                                 Elettronica
                             </h3>
@@ -67,9 +67,9 @@
                         <a class="category category-lavoro" href="#">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
-                            <img class="category-image-lavoro" src="/media/lavoro.png" alt="">
+                            <img class="category-image-lavoro" src="/media/lavoro.png" alt="{{route('announcement.category', 4)}}">
                         </a>
-                        <a class="category category-sport" href="">
+                        <a class="category category-sport" href="{{route('announcement.category', 6)}}">
                             <h3 class="category-title">Sport</h3>
                             <div class="category-count"> +500.000 annunci </div>
                             <img class="category-image-sport" src="/media/sport.png" alt="">
@@ -81,7 +81,7 @@
                     <a class="category category-musica" href="">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
-                        <img class="category-image-musica" src="/media/musica.png" alt="">
+                        <img class="category-image-musica" src="/media/musica.png" alt="{{route('announcement.category', 7)}}">
                     </a>
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-4">
@@ -90,18 +90,18 @@
                             <a class="category category-videogiochi" href="">
                                 <h3 class="category-title">Games</h3>
                                 <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image-videogiochi" src="/media/videogiochi.png" alt="">
+                                <img class="category-image-videogiochi" src="/media/videogiochi.png" alt="{{route('announcement.category', 9)}}">
                             </a>
                         </div>
                         <div class="col-12 col-md-6">
-                            <a class="category category-vinili" href="">
+                            <a class="category category-vinili" href="{{route('announcement.category', 10)}}">
                                 <h3 class="category-title">Vinili</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image-vinili" src="/media/vinili.png" alt="">
                             </a>
                         </div>
                         <div class="col-12">
-                            <a class="category category-artigianato" href="">
+                            <a class="category category-artigianato" href="{{route('announcement.category', 8)}}">
                                 <h3 class="category-title">Artigianato</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image" src="/media/artigianato.png" alt="">

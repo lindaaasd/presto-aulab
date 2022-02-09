@@ -18,8 +18,10 @@ use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', [PublicController::class, 'home'])->name('welcome');
 
+
+
 //!Route Announcement
-Route::get('/category_announcement/{category}', [AnnouncementController::class, 'categoryAnnouncement'])->name('announcement.category');
+Route::get('/category_announcement/{id}', [AnnouncementController::class, 'categoryAnnouncement'])->name('announcement.category');
 Route::get('/form_announcement', [AnnouncementController::class, 'formAnnouncement'])->name('announcement.form');
 Route::post('/form_announcement/submit', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
 Route::get('/details/{announcement}', [AnnouncementController::class, 'detailsAnnouncement'])->name('announcement.details');

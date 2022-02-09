@@ -9,16 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class AnnouncementController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function categoryAnnouncement()
+    public function categoryAnnouncement($id)
     {
-        $category=Category::find('category_id');
-        $announcements=$category->announcements()->orderBy('created_at', 'desc')->paginate(5);
-        return view('announcements.category_announcement', compact('category'));
+        $announcements= Announcement::where('category_id', $id)->get();
+        return view('announcements.category_announcement', compact('announcements'));
     }
 
 

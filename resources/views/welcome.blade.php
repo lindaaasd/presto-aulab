@@ -42,7 +42,7 @@
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
-                        <a class="category-immobili category" href="">
+                        <a class="category-immobili category" href="{{route('announcement.category', ['id'=>$announcement->category->id])}}">
                             <h3 class="category-title">
                                 Immobili
                             </h3>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-2">
                     <div class="row">
-                        <a class="category category-lavoro" href="">
+                        <a class="category category-lavoro" href="#">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
                             <img class="category-image-lavoro" src="/media/lavoro.png" alt="">

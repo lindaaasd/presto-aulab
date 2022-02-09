@@ -15,7 +15,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     @foreach ($categories as $category)
-                        <li><a class="dropdown-item" href="{{ route('announcement.category', compact('category')) }}"
+                        <li><a class="dropdown-item" href="#"
                                 id="{{ $category->id }}">{{ $category->name }}</a></li>
                     @endforeach
                     {{-- <li><a href="{{route('announcement.category', compact('category','announcements'))}}"></a></li> --}}

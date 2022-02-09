@@ -6,6 +6,7 @@
                 <h2 class="card-titolo"> {{ $announcement->title }} </h2>
                 <h3 class="card-prezzo"> {{ $announcement->price }} </h3>
                 <p class="text-center"> {{ $announcement->description }}</p>
+                <p class="text-center"><a href="{{route('announcement.category', ['id'=>$announcement->category->id])}}"> {{$announcement->category->name}}</a></p>
                 <div id="carouselExampleControls"  class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

@@ -123,6 +123,7 @@
                         <h2 class="card-titolo"> {{ $announcement->title }} </h2>
                         <h3 class="card-prezzo"> {{ $announcement->price }} </h3>
                         <p class="text-center"> {{ $announcement->description }}</p>
+                        <p class="text-center">{{$announcement->created_at->format('d/m/Y')}}</p>
                         <a href="{{route('announcement.details', compact('announcement'))}}" class="btn btn-info rounded-pill">dettagli</a>
                     </div>
                 @endforeach

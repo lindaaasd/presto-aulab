@@ -14,11 +14,11 @@ class AnnouncementController extends Controller
         $this->middleware('auth');
     }
 
-    public function categoryAnnouncement($name, $category_id)
+    public function categoryAnnouncement()
     {
-        $category=Category::find($category_id);
+        $category=Category::find('category_id');
         $announcements=$category->announcements()->orderBy('created_at', 'desc')->paginate(5);
-        return view('announcements.category_announcement', compact('category','announcements'));
+        return view('announcements.category_announcement', compact('category'));
     }
 
 

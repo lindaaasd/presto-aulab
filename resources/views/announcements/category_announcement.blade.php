@@ -10,8 +10,6 @@
                     <p class="text-center"> {{ $announcement->description }}</p>
                     <p class="text-center"> {{$announcement->category->name}}</p>
                     <p class="text-center">{{$announcement->created_at->format('d/m/Y')}}</p>
-                    <a href="{{route('announcement.category', [$announcement->category->id, $announcement->category->name])}}"
-                        class="btn btn-info rounded-pill">dettagli</a>
                 </div>
             @endforeach
         </div>

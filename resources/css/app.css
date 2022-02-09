@@ -113,3 +113,7 @@ form-control:focus {
 -a-nav:hover{
     font-size: x-large;
 }
+
+.section-title {
+  font-size: 50px;
+}

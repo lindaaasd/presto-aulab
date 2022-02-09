@@ -52,6 +52,7 @@ a {
     font-weight: 500;
     position: relative;
     z-index: 1;
+    font-size: xx-large;
 }
 
 .category-count {
@@ -90,7 +91,7 @@ a {
     rotate: x 90deg;
 }
 
-.category-image-videogiochi {
+.category-image-games {
     width: 100px;
 }
 

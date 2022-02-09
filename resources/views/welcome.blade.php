@@ -12,17 +12,17 @@
     @endif
 
     {{-- MASTHEAD --}}
-    <section class="container-fluid p-5">
+    <section class="container-fluid p-5 my-5">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 d-flex justify-content-center">
                 <div class="row">
                     <div>
-                        <h1> Presto </h1>
+                        <h1 class="section-title text-center"> Presto </h1>
                     </div>
                     <div>
-                        <h3> something inspirational and buy worthy </h3>
+                        <h3 class="text-center"> something inspirational and buy worthy </h3>
                     </div>
-                    <div class="">
+                    <div class="text-center">
                         <a class="btn btn-danger rounded-pill" href="{{ route('announcement.form') }}">inserisci annuncio</a>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
  
  {{-- SEZIONE PRESENTAZIONE DEGLI ANNUNCI --}}
         <section class="container-fluid py-5">
-            <h1 class="text-center"> Le nostre categorie </h1>
+            <h1 class="section-title text-center"> Le nostre categorie </h1>
             <h2 class="text-center"> Lasciati ispirare dalle categorie più ricercate su Presto.it </h2>
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
@@ -86,7 +86,7 @@
                     <div class="row cat-small-wrapper">
                         <div class="col-12 col-md-6">
                             <a class="category category-videogiochi"href="">
-                                <h3 class="category-title">Videogiochi</h3>
+                                <h3 class="category-title">Games</h3>
                             <div class="category-count"> +50.000 annunci </div>
                             <img class="category-image-videogiochi" src="/media/videogiochi.png" alt="">
                             </a>
@@ -113,7 +113,7 @@
     {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI  --}}
 
 <section class="container-fluid p-5">
-<h1 class="text-center py-5"> I nostri ultimmi annunci </h1>
+<h1 class="section-title text-center py-5"> I nostri ultimmi annunci </h1>
 <div class="row align-items-center justify-content-center">
     @foreach ($announcements as $announcement)
     <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
@@ -128,7 +128,7 @@
 </section>
 
 
-    {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
+    {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI test not passed--}}
 {{-- <section class="container">
     <div class="row">
         <div class="col-12">

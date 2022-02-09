@@ -2,7 +2,7 @@
     <nav class="container-fluid nav-box">
         <div class="row align-items-center">
             <div class="nav-logo col-4 col-md-2 m-0 p-0 d-flex justify-content-center">
-                <a class="navbar-brand" href="./">
+                <a class="navbar-brand" href="{{route('welcome')}}">
                     <img class="" width="80" height="80"
                         src="https://assets.website-files.com/5ec440af4659932990a1020c/6126238e144f7970c00d7c57_60f17a27f09c3f9cecf7ef53_footer-avatar.png"
                         alt="logo">
@@ -17,6 +17,7 @@
                     @foreach ($categories as $category)
                         <li><a class="dropdown-item" href="#" id="{{ $category->id }}">{{ $category->name }}</a></li>
                     @endforeach
+                    {{-- <li><a href="{{route('announcement.category', compact('category','announcements'))}}"></a></li> --}}
                 </ul>
             </div>
             <div class="nav-search col-12 col-md-6 justify-content-start">

@@ -22,8 +22,8 @@
                 </ul>
             </div>
             <div class="nav-search col-12 col-md-6 justify-content-between">
-                <form class="d-flex ms-5 w-50">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form method="get" action="{{route('search')}}" class="d-flex ms-5 w-50">
+                    <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn search-btn" type="submit">Search</button>
                 </form>
 

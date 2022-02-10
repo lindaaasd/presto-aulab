@@ -19,6 +19,10 @@ use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', [PublicController::class, 'home'])->name('welcome');
 
+//!Route SEARCH
+Route::get('/search',[PublicController::class, 'search'])->name('search');
+
+
 
 
 //!Route Announcement

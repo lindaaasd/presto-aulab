@@ -46,7 +46,11 @@
                                                     onclick="event.preventDefault(); document.querySelector('#logout-form').submit();">
                                                     Logout</a></div>
                                         </a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    @if(Auth::user()->is_revisor)
+                                    <li><a class="dropdown-item" href="{{ route ('revisor.welcome') }}"> Revisor Home </a>
+                                    <span class="badge badge-pill badge-warning">{{\App\Models\Announcement::ToBeRevisionedCount()}} </span>
+                                    </li>
+                                    @endif
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

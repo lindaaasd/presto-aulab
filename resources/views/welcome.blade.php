@@ -1,15 +1,15 @@
 <x-layout>
 
     <main class="">
-        @if ($errors->any())
+        {{-- @if ($message->any())
             <div class="alert alert-danger">
                 <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                    @foreach ($message->all() as $message)
+                        <li>{{ $message }}</li>
                     @endforeach
                 </ul>
             </div>
-        @endif
+        @endif --}}
 
         @if (session('access.denied.revisor.only'))
             <div class="alert alert-danger">

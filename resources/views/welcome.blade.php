@@ -11,6 +11,12 @@
             </div>
         @endif
 
+        @if (session('access.denied.revisor.only'))
+            <div class="alert alert-danger">
+                Accesso non consentito - solo per revisori
+            </div>
+        @endif
+
         {{-- MASTHEAD --}}
         <section class="container-fluid p-5 my-5">
             <div class="row align-items-center">
@@ -188,6 +194,7 @@
         </div>
     </div>
 </section> --}}
+
 
     </main>
 </x-layout>

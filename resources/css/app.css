@@ -139,10 +139,10 @@ form-control:focus {
 }
 
 /* BUTTON ANNUNCIO */
-
-/* * {
+/* 
+ .btn-body{
   box-sizing: border-box;
-} */
+}
 
 .btn-div {
   display: block;
@@ -155,9 +155,8 @@ form-control:focus {
   -webkit-font-smoothing: antialiased;
   background-color: #222;
   border: none;
-  color: #fff;
+  
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 100;
   text-decoration: none;
@@ -172,35 +171,35 @@ form-control:focus {
   transition: all 0.1s ease-out;
 }
 .button-annunci:hover {
-  background-color: #90feb5;
-  color: #fff;
+  background-color: #f80000;
+  color: black;
 }
 .button-annunci:active {
   transform: scale(0.95);
 }
-.button--bubble {
+.button-annunci--bubble {
   position: relative;
   z-index: 2;
-  color: white;
+  color: black;
   background: none;
 }
-.button--bubble:hover {
+.button-annunci--bubble:hover {
   background: none;
 }
-.button--bubble:hover + .button--bubble__effect-container .circle {
-  background: #44fd82;
+.button-annunci--bubble:hover + .button-annunci--bubble__effect-container .circle {
+  background: green;
 }
-.button--bubble:hover + .button--bubble__effect-container .button {
-  background: #44fd82;
+.button-annunci--bubble:hover + .button-annunci--bubble__effect-container .button-annunci {
+  background: green;
 }
-.button--bubble:active + .button--bubble__effect-container {
+.button-annunci--bubble:active + .button-annunci--bubble__effect-container {
   transform: scale(0.95);
 }
-.button--bubble__container {
+.button-annunci--bubble__container {
   position: relative;
   display: inline-block;
 }
-.button--bubble__container .effect-button {
+.button-annunci--bubble__container .effect-button {
   position: absolute;
   width: 50%;
   height: 25%;
@@ -212,7 +211,7 @@ form-control:focus {
   transition: background 0.1s ease-out;
 }
 
-.button--bubble__effect-container {
+.button-annunci--bubble__effect-container {
   position: absolute;
   display: block;
   width: 200%;
@@ -223,7 +222,7 @@ form-control:focus {
   transition: all 0.1s ease-out;
   pointer-events: none;
 }
-.button--bubble__effect-container .circle {
+.button-annunci--bubble__effect-container .circle {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -231,11 +230,11 @@ form-control:focus {
   background: #222;
   transition: background 0.1s ease-out;
 }
-.button--bubble__effect-container .circle.top-left {
+.button-annunci--bubble__effect-container .circle.top-left {
   top: 40%;
   left: 27%;
 }
-.button--bubble__effect-container .circle.bottom-right {
+.button-annunci--bubble__effect-container .circle.bottom-right {
   bottom: 40%;
   right: 27%;
 }
@@ -253,7 +252,7 @@ html, body {
   text-align: center;
 }
 
-.button--bubble__container {
+.button-annunci--bubble__container {
   top: 50%;
   margin-top: -25px;
 }
@@ -282,4 +281,4 @@ html, body {
     -ms-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
-}
+} */

@@ -31,12 +31,12 @@ class RevisorController extends Controller
 
         Public function accept ($id) {
 
-            return $this->setAccepted($id, true);
+            return $this->ifAccepted($id, true);
         }
             
         Public function reject ($id) {
 
-            return $this->setAccepted($id, false);
+            return $this->ifAccepted($id, false);
         }
             
 

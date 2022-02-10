@@ -1,6 +1,6 @@
 <x-layout>
 
-@if(announcement)
+@if($announcement)
 
 <section class="container">
     <h2>
@@ -13,6 +13,17 @@
          {{$announcement->user->email}}
     </div>
     </div>
+</section>
+
+<section>
+    <form action="{{route('revisor.accept', $announcement->id)}}" method="POST">
+        @csrf
+        <button class="btn btn-success" type="submit">Accept</button>
+    </form>
+    <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
+        @csrf
+        <button class="btn btn-danger" type="submit">reject</button>
+    </form>
 </section>
 
 

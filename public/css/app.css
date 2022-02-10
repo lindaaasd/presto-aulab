@@ -11323,7 +11323,10 @@ textarea.form-control-lg {
         right: 0;
         top: 0;
     }
+
 }
+
+
 /* CSS reset */
 *,
 *::after,
@@ -11790,18 +11793,17 @@ a {
     margin-bottom: 10px;
 }
 
-
-  
   .cont{
     overflow: hidden;
     position: relative;
+    right: -250px;
     width: 900px;
     height: 550px;
     background: #fff;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   }
   
-  .form{
+  .login-form{
     position: relative;
     width: 640px;
     height: 100%;
@@ -11809,27 +11811,27 @@ a {
     transition: transform 1.2s ease-in-out;
   }
   
-  .h2{
+  .login-title{
     width: 100%;
     font-size: 30px;
     text-align: center;
   }
   
-  .label{
+  .login-label{
     display: block;
     width: 260px;
     margin: 25px auto 0;
     text-align: center;
   }
   
-  .label span{
+  .login-label, .login-span{
     font-size: 14px;
     font-weight: 600;
     color: #505f75;
     text-transform: uppercase;
   }
   
-  .input{
+  .login-input{
     display: block;
     width: 100%;
     margin-top: 5px;
@@ -11839,19 +11841,8 @@ a {
     text-align: center;
     font-family: 'Nunito', sans-serif; 
   }
-  
-  .button{
-    display: block;
-    margin: 0 auto;
-    width: 260px;
-    height: 36px;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-  }
-  
-  .submit{
+    
+  .login-submit{
     margin-top: 40px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -11860,7 +11851,7 @@ a {
     background: -webkit-linear-gradient(left, #7579ff, #b224ef);
   }
   
-  .submit:hover{
+  .login-submit:hover{
     background: -webkit-linear-gradient(left, #b224ef, #7579ff);
   }
   

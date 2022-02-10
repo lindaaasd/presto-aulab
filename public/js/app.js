@@ -3204,7 +3204,24 @@ function withinMaxClamp(min, value, max) {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js"); // $(".button-annunci--bubble").each(function () {
+__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js"); // bubbly button
+
+
+var animateButton = function animateButton(e) {
+  e.preventDefault; //reset animation
+
+  e.target.classList.remove('animate');
+  e.target.classList.add('animate');
+  setTimeout(function () {
+    e.target.classList.remove('animate');
+  }, 700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+} // $(".button-annunci--bubble").each(function () {
 // 	let $circlesTopLeft = $(this).parent().find(".circle.top-left");
 // 	let $circlesBottomRight = $(this).parent().find(".circle.bottom-right");
 // 	let tl = new TimelineLite();

@@ -29,7 +29,7 @@
                             <h3 class="text-center"> something inspirational and buy worthy </h3>
                         </div>
                         <div class="text-center">
-                            <a class="btn btn-danger rounded-pill" href="{{ route('announcement.form') }}">inserisci
+                            <a class="btn bubbly-button rounded-pill" href="{{ route('announcement.form') }}">inserisci
                                 annuncio</a>
                         </div>
                         {{-- <div class="btn-body">

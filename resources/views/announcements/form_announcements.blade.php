@@ -1,42 +1,57 @@
 <x-layout>
-    <div class="container">
-        <div class="row justify-content-center align-items-center mt-5 pt-5">
-            <div class="col-12">
-                <form method="POST" action="{{ route('announcement.create') }}" enctype="multipart/form-data">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="exampleInputText" class="form-label">title</label>
-                        <input type="text" name='title' value="{{ old('title') }}">
-                        @error('title')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
 
-                    <div class="mb-3">
-                        <label for="exampleInputText" class="form-label">price</label>
-                        <input type="text" name='price' value="{{ old('price') }}">
-                        @error('title')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputText" class="form-label">description</label>
-                        <textarea name='description' value="{{ old('description') }}"></textarea>
-                    </div>
-                    <select name="category" >
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">
-                                {{ $category->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                    <input type="file" name="img">
-                    @error('title')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                    <button type="submit" class="btn rounded-pill btn-danger">inserisci</button>
-                </form>
+
+    <section class="container d-flex justify-content-center m-5">
+     <form method="POST" action="{{ route('announcement.create') }}" enctype="multipart/form-data">
+        @csrf
+        <div>
+            <input type="text" name="title" class="question upload-input" id="nme" required autocomplete="off" value="{{ old('title') }}" />
+            <label for="nme" class="upload-label"><span class="upload-span"> What do you want to sell? </span></label>
+            @error('title')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div>
+            <input type="text" name="price" class="question upload-input" id="nme" required autocomplete="off"  />
+            <label for="nme" class="upload-label"><span class="upload-span"> How much does it cost? </span></label>
+            @error('title')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div>
+            <input name="description" class="question upload-input" value="{{ old('description') }}" id="msg" required autocomplete="off"></input>
+            <label class="upload-label" for="msg"><span class="upload-span">Can you describe it ? </span></label>
+            @error('title')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="row justify-content-center align-items-center mt-5">
+            <div class="col-12 col-md-6">
+                <input class="upload-input"type="file" name="img">
+                @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-12 col-md-6">
+                <select name="category" class="category-btn p-3">
+                    @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">
+                        {{ $category->name }}
+                    </option>
+                    @endforeach
+                </select>
             </div>
         </div>
-    </div>
+        <div class="m-5">
+        </div>
+        <div class="d-flex justify-content-start">
+            <button type="submit" class="btn category-btn"> We got it from here! </button>
+        
+        </div>
+    </form>
+    
+</section>
+
+
 </x-layout>
+value="{{ old('price') }}"

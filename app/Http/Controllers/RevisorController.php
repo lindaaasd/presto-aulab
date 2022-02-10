@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 
 class RevisorController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth.revisor');
     }
 
-    Public function index(){
-        dd(' test revisore' );
-       
-       }
+    public function index()
+    {
+        dd('SOLO PER REVISORE');
+    }
 }

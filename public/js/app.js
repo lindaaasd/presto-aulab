@@ -3206,6 +3206,10 @@ function withinMaxClamp(min, value, max) {
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
+document.querySelector('.img-btn').addEventListener('click', function () {
+  document.querySelector('.cont').classList.toggle('s-signup');
+});
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

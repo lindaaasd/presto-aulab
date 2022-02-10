@@ -3,6 +3,8 @@
 @import'mediaquery';
 @import'card';
 @import'home';
+@import'login';
+
 
 :root {
     --main-dark-blue: #0F3C64;

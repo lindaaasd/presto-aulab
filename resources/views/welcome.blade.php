@@ -32,6 +32,35 @@
                             <a class="btn btn-danger rounded-pill" href="{{ route('announcement.form') }}">inserisci
                                 annuncio</a>
                         </div>
+                        <div class="btn-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                                <defs>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                        <feColorMatrix in="blur" mode="matrix"
+                                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                        <feComposite in="SourceGraphic" in2="goo" />
+                                    </filter>
+                                </defs>
+                            </svg>
+
+                            <span class="button--bubble__container">
+                                <a href="#campaign" class="button-annunci button--bubble">
+                                    Hover me
+                                </a>
+                                <span class="button--bubble__effect-container">
+                                    <span class="circle top-left"></span>
+                                    <span class="circle top-left"></span>
+                                    <span class="circle top-left"></span>
+
+                                    <span class="button effect-button"></span>
+
+                                    <span class="circle bottom-right"></span>
+                                    <span class="circle bottom-right"></span>
+                                    <span class="circle bottom-right"></span>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -48,7 +77,7 @@
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
-                        <a class="category-immobili category" href="{{route('announcement.category', 3)}}">
+                        <a class="category-immobili category" href="{{ route('announcement.category', 3) }}">
                             <h3 class="category-title">
                                 Immobili
                             </h3>
@@ -57,7 +86,7 @@
                             </div>
                             <img class="category-image-immobili" src="/media/immobili.png" alt="immobili">
                         </a>
-                        <a class="category-elettronica category" href="{{route('announcement.category', 2)}}">
+                        <a class="category-elettronica category" href="{{ route('announcement.category', 2) }}">
                             <h3 class="category-title">
                                 Elettronica
                             </h3>
@@ -73,9 +102,10 @@
                         <a class="category category-lavoro" href="#">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
-                            <img class="category-image-lavoro" src="/media/lavoro.png" alt="{{route('announcement.category', 4)}}">
+                            <img class="category-image-lavoro" src="/media/lavoro.png"
+                                alt="{{ route('announcement.category', 4) }}">
                         </a>
-                        <a class="category category-sport" href="{{route('announcement.category', 6)}}">
+                        <a class="category category-sport" href="{{ route('announcement.category', 6) }}">
                             <h3 class="category-title">Sport</h3>
                             <div class="category-count"> +500.000 annunci </div>
                             <img class="category-image-sport" src="/media/sport.png" alt="">
@@ -87,7 +117,8 @@
                     <a class="category category-musica" href="">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
-                        <img class="category-image-musica" src="/media/musica.png" alt="{{route('announcement.category', 7)}}">
+                        <img class="category-image-musica" src="/media/musica.png"
+                            alt="{{ route('announcement.category', 7) }}">
                     </a>
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-4">
@@ -96,18 +127,19 @@
                             <a class="category category-videogiochi" href="">
                                 <h3 class="category-title">Games</h3>
                                 <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image-videogiochi" src="/media/videogiochi.png" alt="{{route('announcement.category', 9)}}">
+                                <img class="category-image-videogiochi" src="/media/videogiochi.png"
+                                    alt="{{ route('announcement.category', 9) }}">
                             </a>
                         </div>
                         <div class="col-12 col-md-6">
-                            <a class="category category-vinili" href="{{route('announcement.category', 10)}}">
+                            <a class="category category-vinili" href="{{ route('announcement.category', 10) }}">
                                 <h3 class="category-title">Vinili</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image-vinili" src="/media/vinili.png" alt="">
                             </a>
                         </div>
                         <div class="col-12">
-                            <a class="category category-artigianato" href="{{route('announcement.category', 8)}}">
+                            <a class="category category-artigianato" href="{{ route('announcement.category', 8) }}">
                                 <h3 class="category-title">Artigianato</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image" src="/media/artigianato.png" alt="">
@@ -129,8 +161,9 @@
                         <h2 class="card-titolo"> {{ $announcement->title }} </h2>
                         <h3 class="card-prezzo"> {{ $announcement->price }} </h3>
                         <p class="text-center"> {{ $announcement->description }}</p>
-                        <p class="text-center">{{$announcement->created_at->format('d/m/Y')}}</p>
-                        <a href="{{route('announcement.details', compact('announcement'))}}" class="btn btn-info rounded-pill">dettagli</a>
+                        <p class="text-center">{{ $announcement->created_at->format('d/m/Y') }}</p>
+                        <a href="{{ route('announcement.details', compact('announcement')) }}"
+                            class="btn btn-info rounded-pill">dettagli</a>
                     </div>
                 @endforeach
             </div>

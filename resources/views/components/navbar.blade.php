@@ -21,7 +21,7 @@
                     {{-- <li><a href="{{route('announcement.category', compact('category','announcements'))}}"></a></li> --}}
                 </ul>
             </div>
-            <div class="nav-search col-12 col-md-6 justify-content-between">
+            <div class="nav-search col-12 col-md-6 justify-content-between align-items-center">
                 <form method="get" action="{{route('search')}}" class="d-flex ms-5 w-50">
                     <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn search-btn" type="submit">Search</button>
@@ -30,9 +30,9 @@
 
                 <div>
                     @guest
-                        <div class="nav-login col-4 col-md-2 d-flex ms-5">
-                            <a class="a-nav nav-link" href="{{ route('login') }}"> Accedi <i class="fas fa-user"></i>
-                            </a>
+                        <div class="nav-login col-4 col-md-2 d-flex mx-5">
+                            <button class="btn login-nav-button"><a class="a-nav nav-link" href="{{ route('login') }}"><i class="fas fa-user text-white"></i>
+                            </a></button>
                         @else
                             <li class="nav-item dropdown me-4">
                                 <a class="nav-link dropdown-toggle user-name" href="#" id="navbarDropdown" role="button"

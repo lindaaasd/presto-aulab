@@ -17,7 +17,9 @@ class PublicController extends Controller
     public function search(Request $request){
         $q = $request->input('q');
 
-        $announcements= Announcement::search($q)->get();
+        $announcements= Announcement::where('title','LIKE','%'.$q.'%')->get();
+        // dd($announcements);
+
         return view('search.search_result', compact('q', 'announcements'));
     }
     

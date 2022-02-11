@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Announcement extends Model
 {
     use HasFactory;
+    use Searchable;
+    
     protected $fillable= [
         'title',
         'price',
@@ -19,15 +21,10 @@ class Announcement extends Model
         'category_id',
     ];
 
-    use Searchable;
+   
     public function toSearchableArray(){
         $category=$this->category;
 
-        $array=[
-            'category'=>$category,
-        ];
-
-        return $array;
         }	
     
     public function user(){

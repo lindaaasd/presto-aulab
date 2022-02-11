@@ -12,6 +12,7 @@
                 <h2 class="card-titolo"> # {{ $announcement->user->id }} </h2>
                 <h3 class="card-prezzo"> {{ $announcement->user->name }} </h3>
                 <p class="text-center"> {{ $announcement->user->email }}</p>
+                <h3 class="text-center">{{$announcement->title}}</h3>
                 <div class="row">
                     <div class="col-12 col-md-6">
 

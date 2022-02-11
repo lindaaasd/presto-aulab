@@ -16,17 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $categories= [
-            'automobili',
+            'vinili',
             'elettronica',
             'immobili',
             'lavoro',
-            'casalinghi',
+            'games',
             'sport',
             'musica',
             'artigianato',
-            'giardinaggio',
-            'collezionismo',
-            
         ];
         foreach ($categories as $category){
             DB::table('categories')->insert(['name'=>$category, 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()]);

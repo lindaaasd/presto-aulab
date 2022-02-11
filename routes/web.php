@@ -37,3 +37,6 @@ Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'acc
 Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject'); 
 
 
+//!Route newAnnouncements
+Route::get('/form_newAnnouncement', [AnnouncementController::class, 'newAnnouncement'])->name('new.announcement');
+

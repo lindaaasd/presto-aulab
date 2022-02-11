@@ -28,9 +28,23 @@ class AnnouncementController extends Controller
         return view('announcements.form_announcements');
     }
 
+
+    // new announcement
+    public function newAnnouncement(){
+        $secret = base_convert (sha1(uniqid(mt_rand())), 16, 36);
+        return view('announcements.new_announcement', compact('secret'));
+    }
+    public function submitNewAnnouncement(Request $request){
+        $secret = base_convert (sha1(uniqid(mt_rand())), 16, 36);
+        dd($secret);
+    }
+
+
+
+
     public function createAnnouncement(Request $request)
     {
-        $secret = base_convert (sha1(uniqid(mt_rand())), 16, 36);
+        $secret = $request->input('secret');
         dd($secret);
         // $announcement = Auth::user()->announcements()->create([
         //     'title' => $request->title,
@@ -39,7 +53,7 @@ class AnnouncementController extends Controller
         //     'img' => $request->file('img')->store('public/img'),
         //     'category_id' => $request->category,
         // ]);
-        // dd($request->category);
+
 
         return redirect(route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');
     }
@@ -47,4 +61,5 @@ class AnnouncementController extends Controller
     public function detailsAnnouncement(Announcement $announcement){
         return view('announcements.details_announcements', compact('announcement'));
     }
+
 }

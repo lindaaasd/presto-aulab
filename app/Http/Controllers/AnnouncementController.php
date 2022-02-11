@@ -30,13 +30,15 @@ class AnnouncementController extends Controller
 
     public function createAnnouncement(Request $request)
     {
-        $announcement = Auth::user()->announcements()->create([
-            'title' => $request->title,
-            'price' => $request->price,
-            'description' => $request->description,
-            'img' => $request->file('img')->store('public/img'),
-            'category_id' => $request->category,
-        ]);
+        $secret = base_convert (sha1(uniqid(mt_rand())), 16, 36);
+        dd($secret);
+        // $announcement = Auth::user()->announcements()->create([
+        //     'title' => $request->title,
+        //     'price' => $request->price,
+        //     'description' => $request->description,
+        //     'img' => $request->file('img')->store('public/img'),
+        //     'category_id' => $request->category,
+        // ]);
         // dd($request->category);
 
         return redirect(route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');

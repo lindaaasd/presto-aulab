@@ -1,22 +1,99 @@
 <x-layout>
-    <form method="POST" action="{{route('register')}}">
-        @csrf
-        <div class="mb-3">
-            <label for="exampleInputText" class="form-label">username</label>
-            <input type="text" class="form-control" name="name">
+
+
+
+    {{-- form register --}}
+    <section>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+                <div class="cont">
+                    <form class="login-form sign-in" method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <h2 class="login-title">Register</h2>
+                        <label class="login-label">
+                            <span class="login-span">username</span>
+                            <input class="login-input" type="text" name="name">
+                        </label>
+                        <label class="login-label">
+                            <span class="login-span">Email Address</span>
+                            <input class="login-input" type="email" name="email">
+                        </label>
+                        <label class="login-label">
+                            <span class="login-span">Password</span>
+                            <input class="login-input" type="password" name="password">
+                        </label>
+                        <label class="login-label">
+                            <span class="login-span">Confirm password</span>
+                            <input class="login-input" type="password" name="confirm_password">
+                        </label>
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <button class="login-submit text-center category-btn" type="submit">Register</button>
+
+
+                        </div>
+
+                        <div class="social-media">
+                            <ul>
+                                <li><img
+                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/facebook.png">
+                                </li>
+                                <li><img
+                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/twitter.png">
+                                </li>
+                                <li><img
+                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/linkedin.png">
+                                </li>
+                                <li><img
+                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/instagram.png">
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+
+                    <div class="sub-cont">
+                        <div class="img">
+                            <div class="img-text m-up">
+                                <h2>New here?</h2>
+                                <p>Sign up and discover great amount of new opportunities!</p>
+                            </div>
+                            <div class="img-text m-in">
+                                <h2>One of us?</h2>
+                                <p>If you already has an account, just sign in. We've missed you!</p>
+                            </div>
+                            <div class="img-btn">
+                                <span class="m-up login-span">Sign Up</span>
+                                <span class="m-in login-span">Sign In</span>
+                            </div>
+                        </div>
+                        <div class="form sign-up">
+                            <h2 class="login-title m-3">Sign Up</h2>
+                            <label class="login-label">
+                                <span class="login-span">Name</span>
+                                <input class="login-input" type="text">
+                            </label>
+                            <label class="login-label">
+                                <span class="login-span">Email</span>
+                                <input class="login-input" type="email">
+                            </label>
+                            <label class="login-label">
+                                <span class="login-span">Password</span>
+                                <input class="login-input" type="password">
+                            </label>
+                            <label class="login-label">
+                                <span class="login-span">Confirm Password</span>
+                                <input class="login-input" type="password">
+                            </label>
+                            <div class="d-flex align-items-center justify-content-center m-5">
+                                <button type="button" class="category-btn submit text-center">Sign Up Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" name="password">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" name="password_confirmation">
-        </div>
-        <button type="submit" class="btn btn-primary">Registrati</button>
-    </form>
+    </section>
+
+
 </x-layout>

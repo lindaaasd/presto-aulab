@@ -32,15 +32,18 @@
             </div>
             <div class="row justify-content-center align-items-center mt-5">
                 <div class="col-12 col-md-6">
+
+                    <label for="images" class="upload-label dropzone" id="drophere">
                     {{-- <input class="upload-input" type="file" name="img"> --}}
-                    <div class=“dropzone” id=“drophere”> 
                         @error('images')
                         <span class='invalid-feedback' role='alert'> 
                             {{$message}}
                             
                         </span>
                         @enderror
-                    </div>
+                
+                    </label>
+
                     @error('title')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

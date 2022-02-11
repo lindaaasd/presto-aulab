@@ -11,7 +11,6 @@ class Announcement extends Model
 {
     use HasFactory;
     use Searchable;
-    
     protected $fillable= [
         'title',
         'price',

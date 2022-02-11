@@ -3204,7 +3204,22 @@ function withinMaxClamp(min, value, max) {
   \********************************************/
 /***/ (() => {
 
-
+var drophere = document.querySelector('#drophere');
+var meta = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+var inputSecret = document.querySelector('input[name="secret"]').getAttribute('value'); // function newAnnouncement(){
+//   if(drophere.length > 0){
+//     let csrfToken= meta;
+//     let secret=inputSecret;
+//     let myDropzone = new Dropzone('#drophere'), {
+//         // url: '/announcement/images/upload',
+//          params: {
+//              token:csrfToken,
+//              secret: secret,
+//          }
+//      },
+// }
+// }
+// newAnnouncement();
 
 /***/ }),
 
@@ -3219,7 +3234,8 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.js");
 Dropzone.autoDiscover = false;
 
-__webpack_require__(/*! ./announcementImages */ "./resources/js/announcementImages.js"); // window.$=window.jQuery=require('jquery');
+__webpack_require__(/*! ./announcementImages */ "./resources/js/announcementImages.js"); // document.$=document.jQuery=require('jquery');
+// window.$=window.jQuery=require('jquery');
 // bubbly button
 
 

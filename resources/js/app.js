@@ -3,6 +3,9 @@ document.Dropzone = require('dropzone');
 Dropzone.autoDiscover=false;
 require('./announcementImages');
 
+
+// document.$=document.jQuery=require('jquery');
+
 // window.$=window.jQuery=require('jquery');
 
 // bubbly button

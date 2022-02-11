@@ -16,7 +16,9 @@
                       </label>
                       <div class="d-flex justify-content-center flex-column align-items-center">
                         <button class="login-submit text-center category-btn" type="submit">Sign In</button>
-                        <p class="forgot-pass">Forgot Password ?</p>
+                        <a href="{{route('register')}}">
+                        <p class="forgot-pass">New user? Register here</p>
+                        </a>
 
                       </div>
           

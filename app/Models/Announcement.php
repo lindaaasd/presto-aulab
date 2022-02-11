@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Announcement extends Model
 {
     use HasFactory;
-    use Searchable;
     protected $fillable= [
         'title',
         'price',
@@ -19,10 +18,17 @@ class Announcement extends Model
         'user_id',
         'category_id',
     ];
+
+    use Searchable;
     public function toSearchableArray(){
-		$announcements = $this->announcements;
-		
-	}
+        $category=$this->category;
+
+        $array=[
+            'category'=>$category,
+        ];
+
+        return $array;
+        }	
     
     public function user(){
         return $this->belongsTo(User::class);

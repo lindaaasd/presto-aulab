@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class PublicController extends Controller
     }
 
     public function search(Request $request){
-        $q=$request->input('q');
-        $announcements= Announcement::search('q')->where('visible', true)->get();
+        $q = $request->input('q');
+
+        $announcements= Announcement::search($q)->get();
         return view('search.search_result', compact('q', 'announcements'));
     }
     

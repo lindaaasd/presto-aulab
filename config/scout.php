@@ -16,6 +16,7 @@ return [
     */
 
     'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+    'driver' =>  'tntsearch',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,12 +137,15 @@ return [
 
     'tntsearch' => [
         'storage' => storage_path(),
-        'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
+        'fuzziness' => true,
         'fuzzy' => [
             'prefix_length'=>2,
             'max_expansions'=>50,
             'distance'=>2
-        ]
+        ],
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
+
     ]
 
 ];

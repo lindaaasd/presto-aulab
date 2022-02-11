@@ -5,6 +5,8 @@
 @import'home';
 @import'login';
 @import'uploadform';
+@import'~dropzone/dist/basic';
+@import'~dropzone/dist/dropzone';
 
 
 :root {

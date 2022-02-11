@@ -21,22 +21,21 @@ class RevisorController extends Controller
     Return view('revisor.revisor_welcome', compact('announcement'));
     }
 
-    Private function ifAccepted($id, $value) {
-        $announcement = Announcement::find($id);
-        $announcement->is_accepted = $value;
-        $announcement->save();
-        
-        return redirect (route('revisor.welcome'));
+    private function ifAccepted($announcement_id, $value) {
+            $announcement = Announcement::find($announcement_id);
+            $announcement->is_accepted = $value;
+            $announcement->save();
+            return redirect (route('revisor.welcome'));
         }
 
-        Public function accept ($id) {
+        Public function accept ($announcement_id) {
 
-            return $this->ifAccepted($id, true);
+            return $this->ifAccepted($announcement_id, true);
         }
             
-        Public function reject ($id) {
+        Public function reject ($announcement_id) {
 
-            return $this->ifAccepted($id, false);
+            return $this->ifAccepted($announcement_id, false);
         }
             
 

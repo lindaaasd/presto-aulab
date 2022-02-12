@@ -45,16 +45,20 @@ class AnnouncementController extends Controller
 
         $secret=$request->input('secret');
 
-        $images=session()->get("images.{$secret}");
+        $images=session()->get("images.{$secret}", []);
+        $removedImages = session()->get("removedimages.{$secret}", []);
+
+        $images = array_diff($images, $removedImages);
 
         foreach($images as $image){
 
             $i = new AnnouncementImage();
 
             $fileName= basename($image);
-            $file = Storage::move($image, "/public/announcements/$announcement->id/$fileName");
+            $newFileName= "/public/announcements/{$announcement->id}/{$fileName}";
+            Storage::move($image, $newFileName);
 
-            $i->file = $file;
+            $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
 
             $i->save();
@@ -68,15 +72,34 @@ class AnnouncementController extends Controller
 
     // function upload images
 
-    public function uploadAnnouncement(Request $request){
+    public function uploadImage(Request $request){
         $secret = $request->input('secret');
         $fileName = $request->file('file')->store("public/temp/{$secret}");
         session()->push("images.{$secret}", $fileName);
         
         return response()->json(
-            session()->get("images.{$secret}")
-        );
+
+            [
+                'id' => $fileName
+            ]
+
+            );
+
+        //    session()->get("images.{$secret}"
     }
+
+    public function removeImage(Request $request){
+
+        $secret = $request->input('secret');
+        $fileName = $request->input('id');
+
+        session()->push("removedimages.{$secret}", $fileName);
+
+        Storage::delete($fileName);
+
+        return response()->json('ok');
+    }
+
 
 
     public function detailsAnnouncement(Announcement $announcement){

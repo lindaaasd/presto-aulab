@@ -18,7 +18,7 @@ $(function(){
         });
 
         myDropzone.on("success", function(file, response){
-            file.serveId = response.id;
+            file.serverId = response.id;
         });
 
         myDropzone.on("removedfile", function(file){

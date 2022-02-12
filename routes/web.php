@@ -30,7 +30,9 @@ Route::get('/category_announcement/{id}', [AnnouncementController::class, 'categ
 Route::get('/form_announcement', [AnnouncementController::class, 'formAnnouncement'])->name('announcement.form');
 Route::post('/form_announcement/submit', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
 //!route upload images
-Route::post('/form_announcement/images/upload', [AnnouncementController::class, 'uploadAnnouncement'])->name('announcement.upload');
+Route::post('/form_announcement/images/upload', [AnnouncementController::class, 'uploadImage'])->name('announcement.upload');
+Route::delete('/form_announcement/images/remove', [AnnouncementController::class, 'removeImage'])->name('announcement.remove');
+
 
 Route::get('/details/{announcement}', [AnnouncementController::class, 'detailsAnnouncement'])->name('announcement.details');
 

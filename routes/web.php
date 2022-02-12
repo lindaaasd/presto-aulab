@@ -29,14 +29,13 @@ Route::get('/search',[PublicController::class, 'search'])->name('search');
 Route::get('/category_announcement/{id}', [AnnouncementController::class, 'categoryAnnouncement'])->name('announcement.category');
 Route::get('/form_announcement', [AnnouncementController::class, 'formAnnouncement'])->name('announcement.form');
 Route::post('/form_announcement/submit', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
+//!route upload images
+Route::post('/form_announcement/images/upload', [AnnouncementController::class, 'uploadAnnouncement'])->name('announcement.upload');
+
 Route::get('/details/{announcement}', [AnnouncementController::class, 'detailsAnnouncement'])->name('announcement.details');
 
 //!Route Revisor
 Route::get('/revisor/welcome', [RevisorController::class, 'index'])->name('revisor.welcome');
 Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept'); 
 Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject'); 
-
-
-//!Route newAnnouncements
-Route::get('/form_newAnnouncement', [AnnouncementController::class, 'newAnnouncement'])->name('new.announcement');
 

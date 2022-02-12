@@ -15,7 +15,6 @@ class Announcement extends Model
         'title',
         'price',
         'description',
-        'img',
         'user_id',
         'category_id',
     ];
@@ -38,6 +37,8 @@ class Announcement extends Model
         return Announcement::where('is_accepted', null)-> count();
         }
     
-    
+    public function images(){
+        return $this->hasMany(AnnouncementImage::class);
+    }    
     
 }

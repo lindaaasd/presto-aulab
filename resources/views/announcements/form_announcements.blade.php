@@ -35,11 +35,11 @@
                 <div class="col-12 col-md-6">
                     <div for="images" class="dropzone" id="drophere">
                         
-                        @error('images')
+                        {{-- @error('images')
                         <span class='invalid-feedback' role='alert'> 
                             {{$message}}
                         </span>
-                        @enderror
+                        @enderror --}}
                 
                     </div>
 

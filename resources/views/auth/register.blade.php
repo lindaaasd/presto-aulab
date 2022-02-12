@@ -24,7 +24,7 @@
                         </label>
                         <label class="login-label">
                             <span class="login-span">Confirm password</span>
-                            <input class="login-input" type="password" name="confirm_password">
+                            <input class="login-input" type="password" name="password_confirmation">
                         </label>
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <button class="login-submit text-center category-btn" type="submit">Register</button>

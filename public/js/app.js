@@ -3209,7 +3209,7 @@ $(function () {
     var csrfToken = $('meta[name = "csrf-token"]').attr('content');
     var secret = $('input[name = "secret"]').attr('value');
     var myDropzone = new Dropzone('#drophere', {
-      url: '/announcement/images/upload',
+      url: '/form_announcement/images/upload',
       params: {
         _token: csrfToken,
         secret: secret

@@ -43,18 +43,18 @@ class AnnouncementController extends Controller
             'category_id' => $request->category,
         ]);
         $secret=$request->input('secret');
-        $images=session()->get("images.{$secret}",[]);
+        $images=session()->get("images.$secret", []);
         foreach($images as $image){
             $i = new AnnouncementImage();
             $fileName= basename($image);
-            $file = Storage::move($image, "public/announcements/{$announcement->id}/{$fileName}");
-            $i->file=$file;
+            $file = Storage::move($image, "/public/announcements/$announcement->id/$fileName");
+            $i->file=$fileName;
             $i->announcement_id=$announcement->id;
             $i->save();
 
         }
 
-        File::deleteDirectory(storage_path("/app/public/temp/{$secret}"));
+        File::deleteDirectory(storage_path("/app/public/temp/$secret"));
 
         return redirect(route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');
     }
@@ -62,12 +62,13 @@ class AnnouncementController extends Controller
     // function upload images
 
     public function uploadAnnouncement(Request $request){
-        $secret = $request->input('secret');
-        $fileName = $request->file('file')->store("public/temp/{$secret}");
-        session()->push("images.{$secret}", $fileName);
 
+        $secret = $request->input('secret');
+        $fileName = $request->file('file')->store("public/temp/$secret");
+        session()->push("images.$secret", $fileName);
+        
         return response()->json(
-            session()->get("images.{$secret}")
+            session()->get("images.$secret")
         );
     }
 

@@ -49,7 +49,7 @@ class AnnouncementController extends Controller
             $fileName= basename($image);
             $file = Storage::move($image, "public/announcements/{$announcement->id}/{$fileName}");
             $i->file=$file;
-            $i->announcement_id = $announcement->id;
+            $i->announcement_id=$announcement->id;
             $i->save();
 
         }

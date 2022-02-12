@@ -1,25 +1,24 @@
 
-let drophere = document.querySelector('#drophere');
-let meta = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-let inputSecret = document.querySelector('input[name="secret"]').getAttribute('value');
 
-function newAnnouncement() {
 
-    if (drophere.length > 0) {
+
+$(function(){
+
+    
+
+    if($("#drophere").length > 0){
         
-        let csrfToken = meta;
-        let secret = inputSecret;
+        let csrfToken = $('meta[name = "csrf-token"]').attr('content');
+        let secret = $('input[name = "secret"]').attr('value');
 
         let myDropzone = new Dropzone('#drophere', {
             url: '/announcement/images/upload',
 
             params: {
-
-                token: csrfToken,
-                secret: secret,
+                _token: csrfToken,
+                secret: secret
             }
-        })
-
+        });
     }
-}
-newAnnouncement();
+    
+})

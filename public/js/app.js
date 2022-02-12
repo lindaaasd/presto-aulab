@@ -3204,25 +3204,19 @@ function withinMaxClamp(min, value, max) {
   \********************************************/
 /***/ (() => {
 
-var drophere = document.querySelector('#drophere');
-var meta = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-var inputSecret = document.querySelector('input[name="secret"]').getAttribute('value');
-
-function newAnnouncement() {
-  if (drophere.length > 0) {
-    var csrfToken = meta;
-    var secret = inputSecret;
+$(function () {
+  if ($("#drophere").length > 0) {
+    var csrfToken = $('meta[name = "csrf-token"]').attr('content');
+    var secret = $('input[name = "secret"]').attr('value');
     var myDropzone = new Dropzone('#drophere', {
       url: '/announcement/images/upload',
       params: {
-        token: csrfToken,
+        _token: csrfToken,
         secret: secret
       }
     });
   }
-}
-
-newAnnouncement();
+});
 
 /***/ }),
 

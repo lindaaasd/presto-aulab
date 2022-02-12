@@ -48,7 +48,10 @@ class AnnouncementController extends Controller
     // function upload images
 
     public function uploadAnnouncement(Request $request){
-        dd($request->inp);
+        $secret = $request->input('secret');
+        $fileName = $request->file('file')->store('public/temp/{$secret}');
+        session()->push('images.{$secret}', $fileName);
+        dd(session()->get('images.{$secret}'));
     }
 
 

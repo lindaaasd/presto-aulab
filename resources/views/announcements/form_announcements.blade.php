@@ -4,6 +4,7 @@
     <section class="container d-flex justify-content-center m-5">
         <form method="POST" action="{{ route('announcement.create') }}" enctype="multipart/form-data">
             @csrf
+            <h3>{{$secret}}</h3>
             <div>
                 <input type="text" name="title" class="question upload-input" id="nme" required autocomplete="off"
                     value="{{ old('title') }}" />

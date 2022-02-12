@@ -25,9 +25,12 @@ class AnnouncementController extends Controller
     }
 
 
-    public function formAnnouncement()
+    public function formAnnouncement(Request $request)
     {
-        $secret = base_convert (sha1(uniqid(mt_rand())), 16, 36);
+        $secret = $request->old(
+            'secret',
+             base_convert (sha1(uniqid(mt_rand())), 16, 36));
+
         return view('announcements.form_announcements', compact('secret'));
     }
 
@@ -55,7 +58,7 @@ class AnnouncementController extends Controller
             $i = new AnnouncementImage();
 
             $fileName= basename($image);
-            $newFileName= "/public/announcements/{$announcement->id}/{$fileName}";
+            $newFileName= "public/announcements/{$announcement->id}/{$fileName}";
             Storage::move($image, $newFileName);
 
             $i->file = $newFileName;
@@ -100,6 +103,25 @@ class AnnouncementController extends Controller
         return response()->json('ok');
     }
 
+    public function getImages(Request $request){
+        $secret = $request->input('secret');
+
+        $images = session()->get("images.{$secret}", []);
+        $removedImages = session()->get("removedimages.{$secret}", []);
+
+        $images = array_diff($images, $removedImages);
+
+        $data = [];
+
+        foreach( $images as $image){
+            $data[] = [
+                'id' => $image,
+                'src' => Storage::url($image)
+            ];
+        }
+
+        return response()->json($data);
+    }
 
 
     public function detailsAnnouncement(Announcement $announcement){

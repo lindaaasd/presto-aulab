@@ -162,6 +162,13 @@
                     @if ($announcement->is_accepted)
                         <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
                             <img class="rounded-pill" src="https://via.placeholder.com/150" alt="">
+
+                            {{-- CICLED FUNCTION FOR THE CAROUSEL --}}
+{{-- 
+                            @foreach($announcement->images as $image)
+                            <img src="{{ Storage::url($image->file) }}" class="roaded float-right" alt="">
+                            @endforeach --}}
+
                             <h2 class="card-titolo"> {{ $announcement->title }} </h2>
                             <h3 class="card-prezzo"> {{ $announcement->price }} </h3>
                             <p class="text-center"> {{ $announcement->description }}</p>

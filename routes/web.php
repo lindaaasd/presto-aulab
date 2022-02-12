@@ -32,7 +32,7 @@ Route::post('/form_announcement/submit', [AnnouncementController::class, 'create
 //!route upload images
 Route::post('/form_announcement/images/upload', [AnnouncementController::class, 'uploadImage'])->name('announcement.upload');
 Route::delete('/form_announcement/images/remove', [AnnouncementController::class, 'removeImage'])->name('announcement.remove');
-
+Route::get('form_announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.get');
 
 Route::get('/details/{announcement}', [AnnouncementController::class, 'detailsAnnouncement'])->name('announcement.details');
 

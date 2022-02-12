@@ -1,6 +1,9 @@
 require('bootstrap');
 document.Dropzone = require('dropzone');
-Dropzone.autoDiscover=false;
+Dropzone.autoDiscover= false;
+document.$=document.jQuery=require('jquery');
+
+
 require('./announcementImages');
 
 

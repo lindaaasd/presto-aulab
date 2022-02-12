@@ -1,7 +1,3 @@
-
-
-
-
 $(function(){
 
     if($("#drophere").length > 0){
@@ -14,9 +10,34 @@ $(function(){
 
             params: {
                 _token: csrfToken,
-                secret: secret
-            }
+                secret: secret,
+                paramName: "file", // The name that will be used to transfer t
+            },
+
+            addRemoveLinks: true,
         });
-    }
+
+        myDropzone.on("success", function(file, response){
+            file.serveId = response.id;
+        });
+
+        myDropzone.on("removedfile", function(file){
+            $.ajax({
+                type: 'DELETE',
+                url: '/form_announcement/images/remove',
+                data: {
+                    _token: csrfToken,
+                    id: file.serverId,
+                    secret:secret,
+                },
+
+                dataType: 'json'
+                
+            })
+        })
     
+}
+
+
+
 })

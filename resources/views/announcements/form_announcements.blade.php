@@ -4,7 +4,8 @@
     <section class="container d-flex justify-content-center m-5">
         <form method="POST" action="{{ route('announcement.create') }}" enctype="multipart/form-data">
             @csrf
-            <h3>{{$secret}}</h3>
+            <input type="hidden" value="{{$secret}}" name='secret'>
+            <h2>LA NOSTRA SECRET KEY: {{$secret}}</h2>
             <div>
                 <input type="text" name="title" class="question upload-input" id="nme" required autocomplete="off"
                     value="{{ old('title') }}" />
@@ -24,7 +25,7 @@
             </div>
             <div>
                 <input name="description" class="question upload-input" value="{{ old('description') }}" id="msg"
-                    required autocomplete="off"></input>
+                    required autocomplete="off">
                 <label class="upload-label" for="msg"><span class="upload-span">Can you describe it ?
                     </span></label>
                 @error('title')
@@ -33,15 +34,15 @@
             </div>
             <div class="row justify-content-center align-items-center mt-5">
                 <div class="col-12 col-md-6">
-                    <div for="images" class="dropzone" id="drophere">
-                        
-                        {{-- @error('images')
-                        <span class='invalid-feedback' role='alert'> 
-                            {{$message}}
-                        </span>
-                        @enderror --}}
-                
+                    <label for="images" class="upload-label"> Upload your images here! </label>
+                    <div class="dropzone" id="drophere">
                     </div>
+                    
+                                            @error('images')
+                                            <span class='invalid-feedback' role='alert'> 
+                                                {{$message}}
+                                            </span>
+                                            @enderror
 
                     @error('title')
                         <div class="alert alert-danger">{{ $message }}</div>

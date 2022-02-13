@@ -26,7 +26,7 @@
                             <h1 class="section-title text-center"> Presto </h1>
                         </div>
                         <div>
-                            <h3 class="text-center"> something inspirational and buy worthy </h3>
+                            <h3 class="text-center"> {{__('ui.message')}} </h3>
                         </div>
                         <div class="text-center">
                             <a class="btn bubbly-button rounded-pill" href="{{ route('announcement.form') }}">inserisci
@@ -163,9 +163,18 @@
                         <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
                             <img class="rounded-pill" src="https://via.placeholder.com/150" alt="">
 
+
+                            {{-- @foreach ($announcement->images as $image)
+                                <img class="img-fluid" src="{{ $image->getUrl(300, 150) }}" class="d-block"
+                                    alt="https://via.placeholder.com/150">
+                                <div class="col-12">
+                                    {{ $image->id }}
+                                    {{ $image->file }}
+                                    {{ Storage::url($image->file) }}
+                                </div>
+                            @endforeach --}}
                             {{-- CICLED FUNCTION FOR THE CAROUSEL --}}
-{{-- 
-                            @foreach($announcement->images as $image)
+                            {{-- @foreach ($announcement->images as $image)
                             <img src="{{ Storage::url($image->file) }}" class="roaded float-right" alt="">
                             @endforeach --}}
 

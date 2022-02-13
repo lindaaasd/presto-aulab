@@ -41,3 +41,5 @@ Route::get('/revisor/welcome', [RevisorController::class, 'index'])->name('revis
 Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept'); 
 Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject'); 
 
+//!Route Flag-Icons
+Route::post('/locale/{locale}',  [PublicController::class, 'locale'])->name('locale');

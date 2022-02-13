@@ -23,4 +23,10 @@ class PublicController extends Controller
         return view('search.search_result', compact('q', 'announcements'));
     }
     
+    public function locale($locale){
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
+
+    
 }

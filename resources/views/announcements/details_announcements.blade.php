@@ -11,9 +11,14 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
 
-                        @foreach($announcement->images as $image)
+                        {{-- @foreach($announcement->images as $image)
                             <img class="img-fluid" src="{{$image-> getUrl(300, 150)}}" class="d-block" alt="https://via.placeholder.com/150">
-                        @endforeach
+                            <div class="col-12">
+                                {{$image->id}}
+                                {{$image->name}}
+                                {{Storage::url($image->file)}}
+                            </div>
+                        @endforeach --}}
 
                         </div>
                     </div>

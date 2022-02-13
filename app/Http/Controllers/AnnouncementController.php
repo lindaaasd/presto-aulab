@@ -21,7 +21,7 @@ class AnnouncementController extends Controller
 
     public function categoryAnnouncement($id)
     {
-        $announcements= Announcement::where('category_id', $id)->get();
+        $announcements = Announcement::where('category_id', $id)->get();
         return view('announcements.category_announcement', compact('announcements'));
     }
 
@@ -30,7 +30,8 @@ class AnnouncementController extends Controller
     {
         $secret = $request->old(
             'secret',
-             base_convert (sha1(uniqid(mt_rand())), 16, 36));
+            base_convert(sha1(uniqid(mt_rand())), 16, 36)
+        );
 
         return view('announcements.form_announcements', compact('secret'));
     }
@@ -39,27 +40,27 @@ class AnnouncementController extends Controller
 
     public function createAnnouncement(Request $request)
     {
-    
-            $announcement = Auth::user()->announcements()->create([
+
+        $announcement = Auth::user()->announcements()->create([
             'title' => $request->title,
             'price' => $request->price,
             'description' => $request->description,
             'category_id' => $request->category,
         ]);
 
-        $secret=$request->input('secret');
+        $secret = $request->input('secret');
 
-        $images=session()->get("images.{$secret}", []);
+        $images = session()->get("images.{$secret}", []);
         $removedImages = session()->get("removedimages.{$secret}", []);
 
         $images = array_diff($images, $removedImages);
 
-        foreach($images as $image){
+        foreach ($images as $image) {
 
             $i = new AnnouncementImage();
 
-            $fileName= basename($image);
-            $newFileName= "public/announcements/{$announcement->id}/{$fileName}";
+            $fileName = basename($image);
+            $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
             Storage::move($image, $newFileName);
 
             dispatch(new ResizeImage(
@@ -72,7 +73,6 @@ class AnnouncementController extends Controller
             $i->announcement_id = $announcement->id;
 
             $i->save();
-
         }
 
         File::deleteDirectory(storage_path("/app/public/temp/{$secret}"));
@@ -82,7 +82,8 @@ class AnnouncementController extends Controller
 
     // function upload images
 
-    public function uploadImage(Request $request){
+    public function uploadImage(Request $request)
+    {
         $secret = $request->input('secret');
         $fileName = $request->file('file')->store("public/temp/{$secret}");
 
@@ -94,19 +95,20 @@ class AnnouncementController extends Controller
 
 
         session()->push("images.{$secret}", $fileName);
-        
+
         return response()->json(
 
             [
                 'id' => $fileName
             ]
 
-            );
+        );
 
         //    session()->get("images.{$secret}"
     }
 
-    public function removeImage(Request $request){
+    public function removeImage(Request $request)
+    {
 
         $secret = $request->input('secret');
         $fileName = $request->input('id');
@@ -118,7 +120,8 @@ class AnnouncementController extends Controller
         return response()->json('ok');
     }
 
-    public function getImages(Request $request){
+    public function getImages(Request $request)
+    {
         $secret = $request->input('secret');
 
         $images = session()->get("images.{$secret}", []);
@@ -128,10 +131,10 @@ class AnnouncementController extends Controller
 
         $data = [];
 
-        foreach( $images as $image){
+        foreach ($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' => AnnouncementImage::getUrlByFilePath($image, 80, 80)
+                'src' => Storage::url($image)
             ];
         }
 
@@ -139,8 +142,8 @@ class AnnouncementController extends Controller
     }
 
 
-    public function detailsAnnouncement(Announcement $announcement){
+    public function detailsAnnouncement(Announcement $announcement)
+    {
         return view('announcements.details_announcements', compact('announcement'));
     }
-
 }

@@ -10,13 +10,11 @@
                 <div id="carouselExampleControls"  class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-fluid" src="https://via.placeholder.com/150" class="d-block" alt="https://via.placeholder.com/150">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="https://via.placeholder.com/150" class="d-block" alt="https://via.placeholder.com/150">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="https://via.placeholder.com/150" class="d-block" alt="https://via.placeholder.com/150">
+
+                        @foreach($announcement->images as $image)
+                            <img class="img-fluid" src="{{$image-> getUrl(300, 150)}}" class="d-block" alt="https://via.placeholder.com/150">
+                        @endforeach
+
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

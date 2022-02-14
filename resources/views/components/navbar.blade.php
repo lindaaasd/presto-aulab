@@ -27,64 +27,72 @@
                     <button class="btn search-btn" type="submit">Search</button>
                 </form>
 
-
-                <div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton2"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            scegli lingua
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                            <li>
-                                @include('components._locale', ['lang'=>'it', 'nation'=>'it'])
-                            </li>
-                            <li>
-                                @include('components._locale', ['lang'=>'en', 'nation'=>'us'])
-                            </li>
-                            <li>
-                                @include('components._locale', ['lang'=>'es', 'nation'=>'es'])
-                            </li>
-                        </ul>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-3">
+                        <a href="{{route('contact-form')}}"> Contact us </a>
                     </div>
-                    @guest
-                        <div class="nav-login col-4 col-md-2 d-flex mx-5">
-                            <button class="btn login-nav-button"><a class="a-nav nav-link" href="{{ route('login') }}"><i
-                                        class="fas fa-user text-white"></i>
-                                </a></button>
-                        @else
-                            <li class="nav-item dropdown me-4">
-                                <a class="nav-link dropdown-toggle user-name" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li class="ps-3"><a class="dropdown-item " href="#">
-                                            <div class="nav-item user-name"><a class="fw-bold"
-                                                    href=" {{ route('logout') }}"
-                                                    onclick="event.preventDefault(); document.querySelector('#logout-form').submit();">
-                                                    Logout</a></div>
-                                        </a></li>
-                                    @if (Auth::user()->is_revisor)
-                                        <li><a class="dropdown-item" href="{{ route('revisor.welcome') }}"> Revisor Home
-                                            </a>
-                                            <span
-                                                class="badge badge-pill badge-warning">{{ \App\Models\Announcement::ToBeRevisionedCount() }}
-                                            </span>
-                                        </li>
-                                    @endif
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+                    <div class="col-3">
 
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle"  type="button" id="dropdownMenuButton2"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                @include('components._locale', ['lang'=>'it', 'nation'=>'it'])
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                <li>
+                                    @include('components._locale', ['lang'=>'it', 'nation'=>'it'])
+                                </li>
+                                <li>
+                                    @include('components._locale', ['lang'=>'en', 'nation'=>'us'])
+                                </li>
+                                <li>
+                                    @include('components._locale', ['lang'=>'es', 'nation'=>'es'])
+                                </li>
+                            </ul>
                         </div>
-                    @endguest
+                    </div>
+                    <div class="col-3 me-3">
+                        @guest
+                            <div class="nav-login col-4 col-md-2 d-flex mx-5">
+                                <button class="btn login-nav-button"><a class="a-nav nav-link" href="{{ route('login') }}"><i
+                                            class="fas fa-user text-white"></i>
+                                    </a></button>
+                            @else
+                                <li class="nav-item dropdown me-4">
+                                    <a class="nav-link dropdown-toggle user-name" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ Auth::user()->name }}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li class="ps-3"><a class="dropdown-item " href="#">
+                                                <div class="nav-item user-name"><a class="fw-bold"
+                                                        href=" {{ route('logout') }}"
+                                                        onclick="event.preventDefault(); document.querySelector('#logout-form').submit();">
+                                                        Logout</a></div>
+                                            </a></li>
+                                        @if (Auth::user()->is_revisor)
+                                            <li><a class="dropdown-item" href="{{ route('revisor.welcome') }}"> Revisor Home
+                                                </a>
+                                                <span
+                                                    class="badge badge-pill badge-warning">{{ \App\Models\Announcement::ToBeRevisionedCount() }}
+                                                </span>
+                                            </li>
+                                        @endif
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+    
+                            </div>
+                        @endguest
+                    </div>
                 </div>
+
 
 
             </div>

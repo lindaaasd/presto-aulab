@@ -2,5 +2,5 @@
 <?php
 
 return [
-    'message' => 'ITALIANO',
+    'message' => 'CATEGORIE',
 ];

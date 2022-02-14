@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ContactController;
 use Laravel\Sail\Console\PublishCommand;
 
 
@@ -43,3 +44,7 @@ Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'rej
 
 //!Route Flag-Icons
 Route::post('/locale/{locale}',  [PublicController::class, 'locale'])->name('locale');
+
+//!Route Contact Form
+Route::get('/contact', [ContactController::class, 'index'])->name('contact-form');
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');

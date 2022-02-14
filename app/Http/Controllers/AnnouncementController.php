@@ -41,43 +41,93 @@ class AnnouncementController extends Controller
     public function createAnnouncement(Request $request)
     {
 
-        $announcement = Auth::user()->announcements()->create([
+        // $announcement = Auth::user()->announcements()->create([
+        //     'title' => $request->title,
+        //     'price' => $request->price,
+        //     'description' => $request->description,
+        //     'category_id' => $request->category,
+        // ]);
+
+        // $secret = $request->input('secret');
+
+        // $images = session()->get("images.{$secret}", []);
+        // $removedImages = session()->get("removedimages.{$secret}", []);
+
+        // $images = array_diff($images, $removedImages);
+
+        // foreach ($images as $image) {
+
+        //     $i = new AnnouncementImage();
+
+        //     $fileName = basename($image);
+        //     $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
+        //     Storage::move($image, $newFileName);
+
+        //     dispatch(new ResizeImage(
+        //         $newFileName,
+        //         300,
+        //         150
+        //     ));
+
+        //     $i->file = $newFileName;
+        //     $i->announcement_id = $announcement->id;
+
+        //     $i->save();
+        // }
+
+        // File::deleteDirectory(storage_path("/app/public/temp/{$secret}"));
+
+        // return redirect(route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');
+        $ad = Announcement::create([
             'title' => $request->title,
             'price' => $request->price,
             'description' => $request->description,
-            'category_id' => $request->category,
+            'category_id' => $request->categories,
         ]);
 
+
+        $prova = $ad->id;
+        // dichiaraziioni variabili segreto
         $secret = $request->input('secret');
-
+        // dichiarazione variabile img
         $images = session()->get("images.{$secret}", []);
-        $removedImages = session()->get("removedimages.{$secret}", []);
+        // elimina img
+        $remuveImages = session()->get("remuvedimages.{$secret}", []);
 
-        $images = array_diff($images, $removedImages);
+        // calcolo diff img e img delete
+
+        $images = array_diff($images, $remuveImages, []);
 
         foreach ($images as $image) {
 
             $i = new AnnouncementImage();
-
             $fileName = basename($image);
-            $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
+            $newFileName = "public/form-announcements/{$prova}/{$fileName}";
+
             Storage::move($image, $newFileName);
+            $i->file = $newFileName;
+            $i->announcement_id = $ad->id;
+
 
             dispatch(new ResizeImage(
-                $newFileName,
-                300,
-                150
-            ));
-
-            $i->file = $newFileName;
-            $i->announcement_id = $announcement->id;
-
+                        $newFileName,
+                        300,
+                        150
+                    ));
             $i->save();
+        //     GoogleVisionSafeSearchImage::withChain([
+
+        //         new GoogleVisionLabelImage($i->id),
+        //         new GoogleVisionRemoveFaces($i->id),
+        //         // new ResizeImage($i->file, 300, 300),
+        //         // new ResizeImage($i->file, 300, 200),
+        //         // new ResizeImage($i->file, 600, 600),
+
         }
 
-        File::deleteDirectory(storage_path("/app/public/temp/{$secret}"));
+        File::deleteDirectory(storage_path("/public/temp/{$secret}"));
 
-        return redirect(route('welcome'))->with('message', 'il tuo annuncio é stato inserito correttamente');
+        return redirect(route('welcome'))->with('message', 'Il tuo annuncio e stato inserito correttamente, attendi un revisore per finalizzare la pubblicazione. ');
     }
 
     // function upload images
@@ -134,7 +184,7 @@ class AnnouncementController extends Controller
         foreach ($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' => Storage::url($image)
+                'src' => AnnouncementImage::getUrlByPath($image, 80, 80)
             ];
         }
 

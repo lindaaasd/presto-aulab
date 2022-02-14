@@ -11803,14 +11803,14 @@ a {
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
-    background-color: var(--main-red);
-    color: #fff;
+    background-color: var(--avocado-green);
+    color: black;
     border-radius: 4px;
     border: none;
     cursor: pointer;
     position: relative;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    box-shadow: 0 2px 25px rgba(28, 95, 1, 0.699);
   }
   .bubbly-button:focus {
     outline: 0;
@@ -11829,19 +11829,19 @@ a {
   .bubbly-button:before {
     display: none;
     top: -75%;
-    background-image: radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--main-red) 20%, transparent 30%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-red) 15%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, var(--main-red)20%, transparent 20%), radial-gradient(circle, var(--main-red)20%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%);
+    background-image: radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--avocado-green) 20%, transparent 30%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--avocado-green) 15%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, var(--avocado-green)20%, transparent 20%), radial-gradient(circle, var(--avocado-green)20%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%);
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
   }
   .bubbly-button:after {
     display: none;
     bottom: -75%;
-    background-image: radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-red)15%, transparent 20%), radial-gradient(circle, var(--main-red)20%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, var(--main-red) 20%, transparent 20%), radial-gradient(circle, var(--main-red)20%, transparent 20%);
+    background-image: radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--avocado-green)15%, transparent 20%), radial-gradient(circle, var(--avocado-green)20%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, var(--avocado-green) 20%, transparent 20%), radial-gradient(circle, var(--avocado-green)20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
   }
   .bubbly-button:hover {
     transform: scale(0.9);
-    background-color: var(--main-red);
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    background-color: var(--avocado-green);
+    box-shadow: 0 2px 25px rgba(28, 95, 1, 0.699);
   }
   .bubbly-button.animate:before {   
     display: block;
@@ -14293,6 +14293,7 @@ a {
     --light-gradient: linear-gradient(to bottom right, var(--main-orange), var(--main-red));
     --box-shadow-2: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
     --box-shadow-1: #ff696966 0px 5px, #ff69694d 0px 10px, #ff696933 0px 15px, #ff69691a 0px 20px, #ff69690d 0px 25px;
+    --avocado-green:#8FC44D;
 }
 
 .nav-box {
@@ -14426,146 +14427,4 @@ form-control:focus {
 }
 
 /* BUTTON ANNUNCIO */
-/* 
- .btn-body{
-  box-sizing: border-box;
-}
 
-.btn-div {
-  display: block;
-  height: 100%;
-  -webkit-animation: hue-rotate 10s linear infinite;
-          animation: hue-rotate 10s linear infinite;
-}
-
-.button-annunci {
-  -webkit-font-smoothing: antialiased;
-  background-color: #222;
-  border: none;
-  
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 100;
-  text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  letter-spacing: 1px;
-  color: white;
-  padding: 20px 40px;
-  text-transform: uppercase;
-  transition: all 0.1s ease-out;
-}
-.button-annunci:hover {
-  background-color: #f80000;
-  color: black;
-}
-.button-annunci:active {
-  transform: scale(0.95);
-}
-.button-annunci--bubble {
-  position: relative;
-  z-index: 2;
-  color: black;
-  background: none;
-}
-.button-annunci--bubble:hover {
-  background: none;
-}
-.button-annunci--bubble:hover + .button-annunci--bubble__effect-container .circle {
-  background: green;
-}
-.button-annunci--bubble:hover + .button-annunci--bubble__effect-container .button-annunci {
-  background: green;
-}
-.button-annunci--bubble:active + .button-annunci--bubble__effect-container {
-  transform: scale(0.95);
-}
-.button-annunci--bubble__container {
-  position: relative;
-  display: inline-block;
-}
-.button-annunci--bubble__container .effect-button {
-  position: absolute;
-  width: 50%;
-  height: 25%;
-  top: 50%;
-  left: 25%;
-  z-index: 1;
-  transform: translateY(-50%);
-  background: #222;
-  transition: background 0.1s ease-out;
-}
-
-.button-annunci--bubble__effect-container {
-  position: absolute;
-  display: block;
-  width: 200%;
-  height: 400%;
-  top: -150%;
-  left: -50%;
-  filter: url("#goo");
-  transition: all 0.1s ease-out;
-  pointer-events: none;
-}
-.button-annunci--bubble__effect-container .circle {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  background: #222;
-  transition: background 0.1s ease-out;
-}
-.button-annunci--bubble__effect-container .circle.top-left {
-  top: 40%;
-  left: 27%;
-}
-.button-annunci--bubble__effect-container .circle.bottom-right {
-  bottom: 40%;
-  right: 27%;
-}
-
-.goo {
-  position: absolute;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.button-annunci--bubble__container {
-  top: 50%;
-  margin-top: -25px;
-}
-
-@-webkit-keyframes hue-rotate {
-  from {
-    -moz-filter: hue-rotate(0);
-    -ms-filter: hue-rotate(0);
-    filter: hue-rotate(0);
-  }
-  to {
-    -moz-filter: hue-rotate(360deg);
-    -ms-filter: hue-rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes hue-rotate {
-  from {
-    -moz-filter: hue-rotate(0);
-    -ms-filter: hue-rotate(0);
-    filter: hue-rotate(0);
-  }
-  to {
-    -moz-filter: hue-rotate(360deg);
-    -ms-filter: hue-rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-} */

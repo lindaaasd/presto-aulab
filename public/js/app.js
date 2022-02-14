@@ -3204,23 +3204,69 @@ function withinMaxClamp(min, value, max) {
   \********************************************/
 /***/ (() => {
 
+// $(function(){
+//     if($("#drophere").length > 0){
+//         let csrfToken = $('meta[name = "csrf-token"]').attr('content');
+//         let secret = $('input[name = "secret"]').attr('value');
+//         let myDropzone = new Dropzone('#drophere', {
+//             url: '/form-announcement/images/upload',
+//             params: {
+//                 _token: csrfToken,
+//                 secret: secret,
+//                 // paramName: "file", // The name that will be used to transfer t
+//             },
+//             addRemoveLinks: true,
+//             init: function(){
+//                 $.ajax({
+//                     type: 'GET',
+//                     url: '/form-announcement/images', 
+//                     data: {
+//                         secret: secret
+//                     },
+//                     dataType: 'json'
+//                 }).done(function(data){
+//                     $.each(data, function(key, value){
+//                         let file= {
+//                             serverId: value.id
+//                         };
+//                         myDropzone.options.addedfile.call(myDropzone, file);
+//                         myDropzone.options.thumbnail.call(myDropzone, file, value.src);
+//                     });
+//                 });
+//             }
+//         });
+//         myDropzone.on("success", function(file, response){
+//             file.serverId = response.id;
+//         });
+//         myDropzone.on("removedfile", function file(file){
+//             $.ajax({
+//                 type: 'DELETE',
+//                 url: '/form-announcement/images/remove',
+//                 data: {
+//                     _token: csrfToken,
+//                     id: file.serverId,
+//                     secret:secret,
+//                 },
+//                 dataType: 'json'
+//             })
+//         })
+// }
+// })
 $(function () {
   if ($("#drophere").length > 0) {
-    var csrfToken = $('meta[name = "csrf-token"]').attr('content');
-    var secret = $('input[name = "secret"]').attr('value');
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+    var secret = $('input[name="secret"]').attr('value');
     var myDropzone = new Dropzone('#drophere', {
-      url: '/form_announcement/images/upload',
+      url: '/announcement/images/upload',
       params: {
         _token: csrfToken,
-        secret: secret,
-        paramName: "file" // The name that will be used to transfer t
-
+        secret: secret
       },
       addRemoveLinks: true,
       init: function init() {
         $.ajax({
-          type: 'GET',
-          url: '/form_announcement/images',
+          tipe: 'GET',
+          url: '/announcement/images',
           data: {
             secret: secret
           },
@@ -3239,10 +3285,10 @@ $(function () {
     myDropzone.on("success", function (file, response) {
       file.serverId = response.id;
     });
-    myDropzone.on("removedfile", function (file) {
+    myDropzone.on("removedfile", function file(file) {
       $.ajax({
         type: 'DELETE',
-        url: '/form_announcement/images/remove',
+        URL: '/announcement/images/remuve',
         data: {
           _token: csrfToken,
           id: file.serverId,
@@ -3286,112 +3332,8 @@ var animateButton = function animateButton(e) {
 var bubblyButtons = document.getElementsByClassName("bubbly-button");
 
 for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
-} // $(".button-annunci--bubble").each(function () {
-// 	let $circlesTopLeft = $(this).parent().find(".circle.top-left");
-// 	let $circlesBottomRight = $(this).parent().find(".circle.bottom-right");
-// 	let tl = new TimelineLite();
-// 	let tl2 = new TimelineLite();
-// 	let btTl = new TimelineLite({ paused: true });
-// 	tl.to($circlesTopLeft, 1.2, {
-// 		x: -25,
-// 		y: -25,
-// 		scaleY: 2,
-// 		ease: SlowMo.ease.config(0.1, 0.7, false)
-// 	});
-// 	tl.to($circlesTopLeft.eq(0), 0.1, { scale: 0.2, x: "+=6", y: "-=2" });
-// 	tl.to(
-// 		$circlesTopLeft.eq(1),
-// 		0.1,
-// 		{ scaleX: 1, scaleY: 0.8, x: "-=10", y: "-=7" },
-// 		"-=0.1"
-// 	);
-// 	tl.to(
-// 		$circlesTopLeft.eq(2),
-// 		0.1,
-// 		{ scale: 0.2, x: "-=15", y: "+=6" },
-// 		"-=0.1"
-// 	);
-// 	tl.to($circlesTopLeft.eq(0), 1, {
-// 		scale: 0,
-// 		x: "-=5",
-// 		y: "-=15",
-// 		opacity: 0
-// 	});
-// 	tl.to(
-// 		$circlesTopLeft.eq(1),
-// 		1,
-// 		{ scaleX: 0.4, scaleY: 0.4, x: "-=10", y: "-=10", opacity: 0 },
-// 		"-=1"
-// 	);
-// 	tl.to(
-// 		$circlesTopLeft.eq(2),
-// 		1,
-// 		{ scale: 0, x: "-=15", y: "+=5", opacity: 0 },
-// 		"-=1"
-// 	);
-// 	let tlBt1 = new TimelineLite();
-// 	let tlBt2 = new TimelineLite();
-// 	tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
-// 	tlBt1.add(tl);
-// 	tl2.set($circlesBottomRight, { x: 0, y: 0 });
-// 	tl2.to($circlesBottomRight, 1.1, {
-// 		x: 30,
-// 		y: 30,
-// 		ease: SlowMo.ease.config(0.1, 0.7, false)
-// 	});
-// 	tl2.to($circlesBottomRight.eq(0), 0.1, { scale: 0.2, x: "-=6", y: "+=3" });
-// 	tl2.to(
-// 		$circlesBottomRight.eq(1),
-// 		0.1,
-// 		{ scale: 0.8, x: "+=7", y: "+=3" },
-// 		"-=0.1"
-// 	);
-// 	tl2.to(
-// 		$circlesBottomRight.eq(2),
-// 		0.1,
-// 		{ scale: 0.2, x: "+=15", y: "-=6" },
-// 		"-=0.2"
-// 	);
-// 	tl2.to($circlesBottomRight.eq(0), 1, {
-// 		scale: 0,
-// 		x: "+=5",
-// 		y: "+=15",
-// 		opacity: 0
-// 	});
-// 	tl2.to(
-// 		$circlesBottomRight.eq(1),
-// 		1,
-// 		{ scale: 0.4, x: "+=7", y: "+=7", opacity: 0 },
-// 		"-=1"
-// 	);
-// 	tl2.to(
-// 		$circlesBottomRight.eq(2),
-// 		1,
-// 		{ scale: 0, x: "+=15", y: "-=5", opacity: 0 },
-// 		"-=1"
-// 	);
-// 	tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
-// 	tlBt2.add(tl2);
-// 	btTl.add(tlBt1);
-// 	btTl.to(
-// 		$(this).parent().find(".button-annunci.effect-button"),
-// 		0.8,
-// 		{ scaleY: 1.1 },
-// 		0.1
-// 	);
-// 	btTl.add(tlBt2, 0.2);
-// 	btTl.to(
-// 		$(this).parent().find(".button-annunci.effect-button"),
-// 		1.8,
-// 		{ scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) },
-// 		1.2
-// 	);
-// 	btTl.timeScale(2.6);
-// 	$(this).on("mouseover", function () {
-// 		btTl.restart();
-// 	});
-// });
+  bubblyButtons[i].addEventListener('mouseover', animateButton, false);
+}
 
 /***/ }),
 

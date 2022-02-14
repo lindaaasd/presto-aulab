@@ -24,7 +24,7 @@
                     <div class="row">
                         <div>
                             <h1 class="section-title text-center">  Presto </h1>
-                            <h1>{{ __('ui.title') }}</h1>
+                            
                         </div>
                         <div>
                             <h3 class="text-center"> something inspirational and buy worthy </h3>

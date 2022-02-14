@@ -33,7 +33,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from("admin@presto.com")->view("contact.contact-form");
+        return $this->from("admin@presto.com")->view("mails.thank");
     }
 
 }

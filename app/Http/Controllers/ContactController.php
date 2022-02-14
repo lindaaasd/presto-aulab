@@ -25,6 +25,6 @@ class ContactController extends Controller
         Mail::to($email)->send(new ContactMail($contact));
         Mail::to("admin@presto.com")->send(new AdminMail($adminContact));
 
-        return redirect(route("contact"))->with("message", "Grazie per averci contatatto");
+        return redirect(route("contact-form"))->with("message", "Grazie per averci contatatto");
     }
 }

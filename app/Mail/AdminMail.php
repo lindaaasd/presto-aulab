@@ -11,16 +11,16 @@ class AdminMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $adminContact;
+    public $contact;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($adminContact)
+    public function __construct($contact)
     {
-        $this->adminContact = $adminContact;
+        $this->contact = $contact;
     }
 
     /**
@@ -30,6 +30,6 @@ class AdminMail extends Mailable
      */
     public function build()
     {
-        return $this->from("admin@presto.com")->view("contact.contact-form");
+        return $this->from("admin@presto.com")->view("mails.adminMail");
     }
 }

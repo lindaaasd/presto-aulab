@@ -11,7 +11,7 @@
             <div class="nav-cat col-4 col-md-2 dropdown m-0 p-0 d-flex justify-content-end">
                 <button class="btn category-btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorie
+                    {{__('ui.message')}}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     @foreach ($categories as $category)

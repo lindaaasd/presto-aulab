@@ -2,5 +2,5 @@
 
 
 return [
-		'message'=>'qualcosa che ti ispira',
+		'message'=>'categoria',
 	];

@@ -2,5 +2,5 @@
 
 
 return [
-		'message'=>'vogliamos fares tuttos il progettos',
+		'message'=>'categorias',
 	];

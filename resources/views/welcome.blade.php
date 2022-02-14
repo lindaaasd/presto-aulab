@@ -26,7 +26,7 @@
                             <h1 class="section-title text-center"> Presto </h1>
                         </div>
                         <div>
-                            <h3 class="text-center"> {{__('ui.message')}} </h3>
+                            <h3 class="text-center"> something inspirational and buy worthy </h3>
                         </div>
                         <div class="text-center">
                             <a class="btn bubbly-button rounded-pill" href="{{ route('announcement.form') }}">inserisci

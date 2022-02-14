@@ -1,6 +1,5 @@
 <?php
 
-
 return [
-		'message'=>'category',
-	];
+    'message' => 'CATEGORY',
+];

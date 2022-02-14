@@ -39,7 +39,7 @@
                                 @include('components._locale', ['lang'=>'it', 'nation'=>'it'])
                             </li>
                             <li>
-                                @include('components._locale', ['lang'=>'en', 'nation'=>'gb'])
+                                @include('components._locale', ['lang'=>'en', 'nation'=>'us'])
                             </li>
                             <li>
                                 @include('components._locale', ['lang'=>'es', 'nation'=>'es'])

@@ -9,21 +9,24 @@
                 <p class="text-center"><a
                         href="{{ route('announcement.category', ['id' => $announcement->category->id]) }}">
                         {{ $announcement->category->name }}</a></p>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        @foreach ($announcement->images as $image)
-                        <div class="carousel-item active">
-                                <img class="img-fluid" src="{{ $image->getUrl(300, 150) }}" class="d-block"
-                                    alt="https://via.placeholder.com/150">    
-                        </div>
+                        @foreach ($announcement->images as $key=>$image)
+                            <div class="carousel-item {{$key==0 ? 'active' : ''}}">
+
+                                <img class="img-fluid" src="{{ $image->getUrl(300, 150) }}"
+                                    class="d-block" alt="https://via.placeholder.com/150">
+                            </div>
                         @endforeach
+
+
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>

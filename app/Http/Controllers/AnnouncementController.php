@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Jobs\ResizeImage;
 use App\Models\Category;
 use App\Models\Announcement;
@@ -77,6 +79,13 @@ class AnnouncementController extends Controller
                         150
                     ));
             $i->save();
+
+            dispatch(new GoogleVisionSafeSearchImage(
+                $i->id
+            ));
+            
+            dispatch(new GoogleVisionLabelImage($i->id));
+    
         }
 
         File::deleteDirectory(storage_path("/public/temp/{$secret}"));

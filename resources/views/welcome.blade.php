@@ -135,7 +135,6 @@
 
                                     @foreach ($announcement->images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-
                                             <img class="img-fluid" src="{{ $image->getUrl(300, 150) }}"
                                                 class="d-block" alt="https://via.placeholder.com/150">
                                         </div>

@@ -5,7 +5,6 @@
         <form method="POST" action="{{ route('announcement.create') }}" enctype="multipart/form-data">
             @csrf
             <input type="hidden" value="{{$secret}}" name='secret'>
-            <h2>LA NOSTRA SECRET KEY: {{$secret}}</h2>
             <div>
                 <input type="text" name="title" class="question upload-input" id="nme" required autocomplete="off"
                     value="{{ old('title') }}" />

@@ -31,6 +31,11 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    <div class="col-10">
+                        Adult:   {{$image->adult}} <br>
+                        Spoof:  {{$image->spoof}} <br>
+                        Racy: {{$image->racy}} <br>
+                       </div>
                 </div>
             </div>
         </div>

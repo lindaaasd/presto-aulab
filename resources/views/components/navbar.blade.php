@@ -9,17 +9,19 @@
                 </a>
             </div>
             <div class="nav-cat col-4 col-md-2 dropdown m-0 p-0 d-flex justify-content-end">
-                <button class="btn category-btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.message')}}
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    @foreach ($categories as $category)
-                        <li><a class="dropdown-item" href="{{ route('announcement.category', $category->id) }}"
-                                id="{{ $category->id }}">{{ $category->name }}</a></li>
-                    @endforeach
-                    {{-- <li><a href="{{route('announcement.category', compact('category','announcements'))}}"></a></li> --}}
-                </ul>
+                <div class="dropdown">
+                    <button class="btn category-btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{__('ui.message')}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{ route('announcement.category', $category->id) }}"
+                                    id="{{ $category->id }}">{{ $category->name }}</a></li>
+                        @endforeach
+                        {{-- <li><a href="{{route('announcement.category', compact('category','announcements'))}}"></a></li> --}}
+                    </ul>
+                </div>
             </div>
             <div class="nav-search col-12 col-md-6 justify-content-between align-items-center">
                 <form method="GET" action="{{ route('search') }}" class="d-flex ms-5 w-50">

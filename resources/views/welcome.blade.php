@@ -71,11 +71,11 @@
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-2">
                     <div class="row">
-                        <a class="category category-lavoro" href="#">
+                        <a class="category category-lavoro" href="{{ route('announcement.category', 4) }}">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
                             <img class="category-image-lavoro" src="/media/lavoro.png"
-                                alt="{{ route('announcement.category', 4) }}">
+                                alt="">
                         </a>
                         <a class="category category-sport" href="{{ route('announcement.category', 6) }}">
                             <h3 class="category-title">Sport</h3>
@@ -86,25 +86,25 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-3">
-                    <a class="category category-musica" href="">
+                    <a class="category category-musica" href="{{ route('announcement.category', 7) }}">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
                         <img class="category-image-musica" src="/media/musica.png"
-                            alt="{{ route('announcement.category', 7) }}">
+                            alt="">
                     </a>
                 </div>
                 <div class="col-6 col-md-3 cat-col cat-col-4">
                     <div class="row cat-small-wrapper">
                         <div class="col-12 col-md-6">
-                            <a class="category category-videogiochi" href="">
+                            <a class="category category-videogiochi" href="{{ route('announcement.category', 5) }}">
                                 <h3 class="category-title">Games</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image-videogiochi" src="/media/videogiochi.png"
-                                    alt="{{ route('announcement.category', 9) }}">
+                                    alt="">
                             </a>
                         </div>
                         <div class="col-12 col-md-6">
-                            <a class="category category-vinili" href="{{ route('announcement.category', 10) }}">
+                            <a class="category category-vinili" href="{{ route('announcement.category', 1) }}">
                                 <h3 class="category-title">Vinili</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image-vinili" src="/media/vinili.png" alt="">

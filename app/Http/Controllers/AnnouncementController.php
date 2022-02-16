@@ -25,6 +25,7 @@ class AnnouncementController extends Controller
 
     public function categoryAnnouncement($id)
     {
+        
         $announcements = Announcement::where('category_id', $id)->get();
         return view('announcements.category_announcement', compact('announcements'));
     }

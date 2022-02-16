@@ -13,4 +13,41 @@
                 </div>
             @endforeach
         </div>
+        <script>
+            window.onload = function() {
+                let categoryId =
+                '{{ $announcement->category->id }}'; //il categoryId lo prendi dall'annuncio e lo metti qui dentro con PHP
+                let backgroundColorBasedOnCategory = "";
+                switch (categoryId) {
+                    case '1':
+                        backgroundColorBasedOnCategory = '#FF89C230';
+                        break;
+                    case '2':
+                        backgroundColorBasedOnCategory = "#60B1D230";
+                        break;
+                        case '3':
+                        backgroundColorBasedOnCategory = "#D2FD6130";
+                        break;
+                        case '4':
+                        backgroundColorBasedOnCategory = "#FF89C230";
+                        break;
+                        case '5':
+                        backgroundColorBasedOnCategory = "#13C1AC30";
+                        break;
+                        case '6':
+                        backgroundColorBasedOnCategory = "#FD6C6730";
+                        break;
+                        case '7':
+                        backgroundColorBasedOnCategory = "#385EF930";
+                        break;
+                        case '8':
+                        backgroundColorBasedOnCategory = "#F4970B30";
+                        break;
+                    default:
+                        backgroundColorBasedOnCategory = "white30";
+                }
+
+                $('body').css("background-color", backgroundColorBasedOnCategory);
+            }();
+        </script>
 </x-layout>

@@ -3204,54 +3204,6 @@ function withinMaxClamp(min, value, max) {
   \********************************************/
 /***/ (() => {
 
-// $(function(){
-//     if($("#drophere").length > 0){
-//         let csrfToken = $('meta[name = "csrf-token"]').attr('content');
-//         let secret = $('input[name = "secret"]').attr('value');
-//         let myDropzone = new Dropzone('#drophere', {
-//             url: '/form-announcement/images/upload',
-//             params: {
-//                 _token: csrfToken,
-//                 secret: secret,
-//                 // paramName: "file", // The name that will be used to transfer t
-//             },
-//             addRemoveLinks: true,
-//             init: function(){
-//                 $.ajax({
-//                     type: 'GET',
-//                     url: '/form-announcement/images', 
-//                     data: {
-//                         secret: secret
-//                     },
-//                     dataType: 'json'
-//                 }).done(function(data){
-//                     $.each(data, function(key, value){
-//                         let file= {
-//                             serverId: value.id
-//                         };
-//                         myDropzone.options.addedfile.call(myDropzone, file);
-//                         myDropzone.options.thumbnail.call(myDropzone, file, value.src);
-//                     });
-//                 });
-//             }
-//         });
-//         myDropzone.on("success", function(file, response){
-//             file.serverId = response.id;
-//         });
-//         myDropzone.on("removedfile", function file(file){
-//             $.ajax({
-//                 type: 'DELETE',
-//                 url: '/form-announcement/images/remove',
-//                 data: {
-//                     _token: csrfToken,
-//                     id: file.serverId,
-//                     secret:secret,
-//                 },
-//                 dataType: 'json'
-//             })
-//         })
-// }
-// })
 $(function () {
   if ($("#drophere").length > 0) {
     var csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -3288,7 +3240,7 @@ $(function () {
     myDropzone.on("removedfile", function file(file) {
       $.ajax({
         type: 'DELETE',
-        URL: '/announcement/images/remuve',
+        URL: '/announcement/images/remove',
         data: {
           _token: csrfToken,
           id: file.serverId,
@@ -3337,7 +3289,32 @@ var bubblyButtons = document.getElementsByClassName("bubbly-button");
 
 for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('mouseover', animateButton, false);
-}
+} // let background = document.querySelector('#bg-category');
+// switch (background){
+//   case 
+// }
+// window.onload=function(){
+//   let vinili=1;
+//   let elettronica=2;
+//   let immobili=3;
+//   let lavoro=4;
+//   let games=5;
+//   let sport=6;
+//   let musica=7;
+//   let artigianato=8;
+//   let backgroundColorBasedOnCategory="";
+//   switch (categoryId){
+//     case 1:
+//       backgroundColorBasedOnCategory="blue";
+//       break;
+//     case 2:
+//       backgroundColorBasedOnCategory="green";
+//       break;
+//     default:
+//       backgroundColorBasedOnCategory="pink";
+//       }
+//   $('#bg-category').css({'background-color',backgroundColorBasedOnCategory});
+// }
 
 /***/ }),
 

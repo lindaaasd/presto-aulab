@@ -11328,13 +11328,8 @@ textarea.form-control-lg {
 
 @media only screen and (min-width: 375px){
 
-    .category-wrapper {
-        margin: auto;
-    }
 
-    .category-videogiochi  {
-        margin-right: 0px !important;
-    }
+
 }
 
 /* CSS reset */
@@ -11663,7 +11658,7 @@ i {
     color: var(--main-dark-blue)!important;
     height: 350px;
     width: 220px;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .category-title {
@@ -11765,21 +11760,71 @@ i {
 
 }
 
-.category-videogiochi {
-    background-color: #13C1AC;
+
+
+.cat-immobili{
+  height: 70%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #D2FD61;
+    color: var(--main-dark-blue)!important;
+}
+.cat-elettronica{
+  height: 30%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: var(--main-light-blue);
     color: #fff!important;
-    height: 150px;
-    width: 150px;
-
 }
-
-.category-vinili {
-    background-color: #FF89C2;
+.cat-lavoro{
+  height: 40%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #FF89C2;
     color: #670A6F!important;
-    height: 150px;
-    width: 150px;
 }
+.cat-sport{
+  height: 60%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #FD6C67;
+    color: #3d282f!important;
+}
+.cat-musica{
+  height: 100%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #385EF9;
+  color: #A3FBFF!important;
+}
+.cat-artigianato{
+  height: 70%;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #F49709;
+  color: #A31745!important;
+}
+.cat-vin-job{
+  height: 30%;
+  border-radius: 40px;
+  margin: 10px;
+}
+.cat-vinili{
+  border-radius: 40px;
+  background-color: #FF89C2;
+    color: #670A6F!important;
+    height: 100%;
+   
 
+}
+.cat-giochi{
+  border-radius: 40px;
+  background-color: #13C1AC;
+    color: #fff!important;
+    height: 100%;
+   
+
+}
 /* ULTIMI 5 ANNUNCI */
 
 .card-annunci {

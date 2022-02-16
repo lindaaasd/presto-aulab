@@ -77,8 +77,8 @@ class AnnouncementController extends Controller
 
             dispatch(new ResizeImage(
                         $newFileName,
-                        300,
-                        150
+                        500,
+                        500
                     ));
             $i->save();
 

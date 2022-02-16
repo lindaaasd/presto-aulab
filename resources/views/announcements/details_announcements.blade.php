@@ -1,14 +1,14 @@
 <x-layout>
 
-    <section class="container-fluid p-5">
+    <section class="container-fluid m-5 p-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
 
             <div id="carouselDetail" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($announcement->images as $key => $image)
                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <img class="img-fluid card-image" src="{{ $image->getUrl(300, 150) }}"
+                            <img class="img-fluid card-image" src="{{ $image->getUrl(500, 500) }}"
                                 class="d-block" alt="https://via.placeholder.com/150">
                         </div>
                     @endforeach
@@ -27,20 +27,40 @@
 
 
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-8 col-md-4">
 
         <h2 class="text-center display-2"> {{ $announcement->title }} </h2>
-        <h3 class="text-center"> {{ $announcement->price }} </h3>
-        <p class="text-center"> {{ $announcement->description }}</p>
+        <hr>
+        <div class="row justify-content-around m-5">
+            <div class="col-6 col-md-3">
+
+                <h3 class="text-center detail-box"> € {{ $announcement->price }} </h3>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="text-center detail-box">{{$announcement->category->name}}</h3>
+            </div>
+
+        </div>
+        
+        
 
 
-
+        </div>
+        
+    </div>
+    <hr>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <h1> <strong>Description</strong></h1>
+            <div class="col-12">
+                <p class=" mt-5 fs-2"> {{ $announcement->description }}</p>
+            </div>
         </div>
     </div>
 
 
 
-        <h1 class="section-title text-center py-5"> Details </h1>
+        {{-- <h1 class="section-title text-center py-5"> Details </h1>
         <div class="row w-100 align-items-center justify-content-center">
             <div class="col-12 w-100 card-annunci mx-5 d-flex justify-content-center">
                 <h2 class="card-titolo"> {{ $announcement->title }} </h2>
@@ -76,7 +96,7 @@
                        </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section>
 </x-layout>
 

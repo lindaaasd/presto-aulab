@@ -55,9 +55,9 @@
                     <div class="col-3 me-3">
                         @guest
                             <div class="nav-login col-4 col-md-2 d-flex mx-5">
-                                <button class="btn login-nav-button" href="{{ route('login') }}"><i
+                                <a class="btn login-nav-button" href="{{ route('login') }}"><i
                                             class="fas fa-user text-white"></i>
-                                </button>
+                                </a>
                             @else
                                 <li class="nav-item dropdown me-4">
                                     <a class="nav-link dropdown-toggle user-name" href="#" id="navbarDropdown" role="button"

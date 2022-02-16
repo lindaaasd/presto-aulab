@@ -7,6 +7,7 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\AnnouncementImage;
+use App\Jobs\GoogleVisionWatermark;
 use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -89,6 +90,7 @@ class AnnouncementController extends Controller
             $job -> withChain([
                 new GoogleVisionLabelImage($i->id),
                 new GoogleVisionRemoveFaces($i->id),
+                new GoogleVisionWatermark($i->id),
                 new ResizeImage(
                     $i->file,
                     300,

@@ -11285,6 +11285,7 @@ textarea.form-control-lg {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
+    font-size: smaller;
 }
 
 .footer-body {
@@ -11325,288 +11326,6 @@ textarea.form-control-lg {
     }
 
 }
-
-@media only screen and (min-width: 375px){
-
-
-
-}
-
-/* CSS reset */
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-html { font-size: 62.5%; }
-
-body {
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Main heading for card's front cover */
-.card-front__heading {
-  font-size: 3rem;
-  margin-top: .25rem;
-}
-
-/* Main heading for inside page */
-.inside-page__heading { 
-  padding-bottom: 1rem; 
-  width: 100%;
-}
-
-/* Mixed */
-
-/* For both inside page's main heading and 'view me' text on card front cover */
-.inside-page__heading,
-.card-front__text-view {
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-top: .2rem;
-}
-
-.inside-page__heading--city,
-.card-front__text-view--city { color: var(--main-red); }
-
-/* Front cover */
-
-.card-front__tp { 
-    color: white;
-    font-size: 10rem;
-}
-
-/* For pricing text on card front cover */
-.card-front__text-price {
-  font-size: 1.5rem;
-  margin-top: -.2rem;
-}
-
-/* Back cover */
-
-/* For inside page's body text */
-.inside-page__text {
-  color: var(--main-dark-blue);
-}
-
-/* Icons ===========================================*/
-
-.card-front__icon {
-  fill: #fafbfa;
-  font-size: 3vw;
-  height: 3.25rem;
-  margin-top: -.5rem;
-  width: 3.25rem;
-}
-
-/* Buttons =================================================*/
-
-.inside-page__btn {
-  background-color: transparent;
-  border: 3px solid;
-  border-radius: .5rem;
-  font-size: 0.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  overflow: hidden;
-  padding: .7rem .75rem;
-  position: relative;
-  text-decoration: none;
-  transition: all .3s ease;
-  width: 90%;
-  z-index: 10;
-}
-
-.inside-page__btn::before { 
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform: scaleY(0);
-  transition: all .3s ease;
-  width: 100%;
-  z-index: -1;
-}
-
-.inside-page__btn--city { 
-  border-color: var(--main-red);
-  color: var(--main-red);
-}
-
-.inside-page__btn--city::before { 
-  background-color: var(--main-red);
-}
-
-/* Layout Structure=========================================*/
-
-
- /* Container to hold all cards in one place */
-.card-area {
-  align-items: center;
-  display: flex;
-  flex-wrap: nowrap; 
-   height: 100%; 
-   justify-content: space-evenly; 
-  padding: 1rem;
-}
-
-/* Card ============================================*/
-
-/* Area to hold an individual card */
-.card-section {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-}
-
-/* A container to hold the flip card and the inside page */
-.card {
-  background-color: rgba(0,0,0, .05);
-  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-  height: 30rem;
-  position: relative;
-  transition: all 1s ease;
-  width: 30rem;
-}
-
-/* Flip card - covering both the front and inside front page */
-
-/* An outer container to hold the flip card. This excludes the inside page */
-.flip-card {
-  height: 30rem;
-  perspective: 100rem;
-  position: absolute;
-  right: 0;
-  transition: all 1s ease;
-  visibility: hidden;
-  width: 30rem;
-  z-index: 100;
-}
-
-/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
-/* This is done so content in the inside page can be selected */
-.flip-card > * {
-  visibility: visible;
-}
-
-/* An inner container to hold the flip card. This excludes the inside page */
-.flip-card__container {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  transition: all 1s ease;
-  width: 100%;
-}
-
-.card-front,
-.card-back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* Styling for the front side of the flip card */
-
-/* container for the front side */
-.card-front {
-  background-color: #fafbfa;
-  height: 30rem;
-  width: 30rem;
-}
-
-/* Front side's top section */
-.card-front__tp {
-  align-items: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
-  display: flex;
-  flex-direction: column;
-  height: 24rem;
-  justify-content: center;
-  padding: .75rem;
-}
-
-.card-front__tp--city {
-  background: linear-gradient(
-    to bottom,
-    var(--main-red),
-    var(--main-orange)
-  );
-}
-
-/* Front card's bottom section */
-.card-front__bt {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-/* Styling for the back side of the flip card */
-
-.card-back {
-  background-color: #fafbfa;
-  transform: rotateY(180deg);
-}
-
-/* Inside page */
-
-.inside-page {
-  background-color: #fafbfa;
-  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
-  height: 100%;
-  padding: 1rem;
-  position: absolute;
-  right: 0;
-  transition: all 1s ease;
-  width: 30rem;
-  z-index: 1;
-}
-
-.inside-page__container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  text-align: center; 
-  width: 100%;
-}
-
-/* Functionality ====================================*/
-
-/* This is to keep the card centered (within its container) when opened */
-.card:hover {
-  box-shadow:
-  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
-  width: 30rem;
-}
-
-/* When the card is hovered, the flip card container will rotate */
-.card:hover .flip-card__container {
-  transform: rotateY(-180deg);
-}
-
-/* When the card is hovered, the shadow on the inside page will shrink to the left */
-.card:hover .inside-page {
-  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
-}
-
-
-/* .carousel-button {
-  color:crimson;
-} */
 a {
     text-decoration: none;
     color: var(--main-dark-blue);
@@ -11618,54 +11337,14 @@ i {
 
 /* CATEGORIE */
 
-.cat-col{
-    flex-direction: column;
-    height: 500px;
-}
-
-.cat-col-1 {
-    width:19%;
-}
-
-.cat-col-2 {
-    width:19%;
-}
-.cat-col-3 {
-    width: 19%;
-}
-.cat-col-4{
-    width: 25%;
-    margin-left: 35px;
-
-}
-
-.category {
-    position: relative;
-    padding: 20px 17px;
-}
-
-.cat-small-wrapper {
-    display: flex;
-    flex-grow: 1;
-}
-
-.category-wrapper {
-    margin: 60px;
-}
-
-.category-immobili {
-    background-color: #D2FD61;
-    color: var(--main-dark-blue)!important;
-    height: 350px;
-    width: 220px;
-    margin-bottom: 20px;
-}
-
 .category-title {
     font-weight: 500;
     position: relative;
     z-index: 1;
     font-size: xx-large;
+    text-align: start;
+    padding-left: 20px;
+    padding-top:5px;
 }
 
 .category-count {
@@ -11673,156 +11352,82 @@ i {
     line-height: 24px;
     letter-spacing: -.05em;
     position: relative;
-    z-index: 1; }
+    z-index: 1; 
+    padding-left: 20px;
 
-.category-image-immobili {
-    width: 200px;
-    margin-top:50px;
-    overflow: visible;
-  
-}
+  }
 
-.category-image-elettronica {
-    width: 130px;
-    left: 100px;
-  
-}
-
-.category-image-lavoro {
-    width: 130px;
-    margin-left: 30px;  
-}
-
-.category-image-sport {
-    width: 200px;
-    margin-left: 10px;  
-    margin-top: 60px;
-}
-
-.category-image-musica {
-    width: 250px;
-    rotate: x 90deg;
-}
-
-.category-image-games {
-    width: 100px;
-}
-
-.category-image-vinili {
-    width: 100px;
-}
-
-.category-image-artigianato {
-    width: 80px;
-}
-
-.category-elettronica {
-    background-color: var(--main-light-blue);
-    color: #fff!important;
-    height:150px;
-    width: 220px;
-}
-
-.City__img, .category {
+.category {
     display: block;
     border-radius: 40px;
     overflow: hidden;
 }
 
-.category-lavoro {
-    background-color: #FF89C2;
-    color: #670A6F!important;
-    height: 150px;
-    width: 220px;
-    margin-bottom: 20px;
-}
-
-.category-sport {
-    background-color: #FD6C67;
-    color: #3d282f!important;
-    height: 350px;
-    width: 220px;
-}
-
-.category-musica {
-    background-color: #385EF9;
-    color: #A3FBFF!important;
-    height: 520px;
-    width: 250px;
-}   
-
-.category-artigianato {
-    background-color: #F49709;
-    color: #A31745!important;
-    height: 350px;
-    width: 242px;
-    margin-top: 15px;
-
-}
-
-
-
 .cat-immobili{
-  height: 70%;
+  height: 50%;
   border-radius: 40px;
   margin: 10px;
   background-color: #D2FD61;
-    color: var(--main-dark-blue)!important;
+  color: var(--main-dark-blue)!important;
 }
+
 .cat-elettronica{
-  height: 30%;
+  height: 20%;
   border-radius: 40px;
   margin: 10px;
   background-color: var(--main-light-blue);
-    color: #fff!important;
+  color: #fff!important;
 }
+
 .cat-lavoro{
-  height: 40%;
+  height: 20%;
   border-radius: 40px;
   margin: 10px;
   background-color: #FF89C2;
-    color: #670A6F!important;
+  color: #670A6F!important;
 }
 .cat-sport{
-  height: 60%;
+  height: 50%;
   border-radius: 40px;
   margin: 10px;
   background-color: #FD6C67;
-    color: #3d282f!important;
+  color: #3d282f!important;
 }
+
 .cat-musica{
-  height: 100%;
+  height: 70%;
   border-radius: 40px;
   margin: 10px;
   background-color: #385EF9;
   color: #A3FBFF!important;
 }
+
 .cat-artigianato{
-  height: 70%;
+  height: 35%;
   border-radius: 40px;
   margin: 10px;
   background-color: #F49709;
   color: #A31745!important;
 }
+
 .cat-vin-job{
-  height: 30%;
+  height: 35%;
   border-radius: 40px;
   margin: 10px;
 }
+
 .cat-vinili{
   border-radius: 40px;
   background-color: #FF89C2;
-    color: #670A6F!important;
-    height: 100%;
-   
-
+  color: #670A6F!important;
+  height: 100%;
 }
+
 .cat-giochi{
   border-radius: 40px;
   background-color: #13C1AC;
-    color: #fff!important;
-    height: 100%;
-   
+  color: #fff!important;
+  height: 100%;
 
 }
 /* ULTIMI 5 ANNUNCI */
@@ -12411,8 +12016,8 @@ i {
   right: 0;
   border-top: 5px solid var(--avocado-green);
 /*   z-index: 1; */
-  -webkit-animation: bounce 1.5s infinite;
-          animation: bounce 1.5s infinite;
+  -webkit-animation: bounce 1.5s;
+          animation: bounce 1.5s;
 }
 ::-webkit-input-placeholder {
   font-size: 1.3em;
@@ -12420,16 +12025,17 @@ i {
 
 .title{
   display: block;
-  font-family: sans-serif;
   margin: 10px auto 5px;
   width: 300px;
+  font-size: large;
 }
 .termsConditions{
   margin: 0 auto 5px 80px;
+  font-size: large;
 }
 
 .pageTitle{
-  font-size: 2em;
+  font-size: x-large;
   font-weight: bold;
 }
 .secondaryTitle{
@@ -12438,39 +12044,43 @@ i {
 
 .name {
   background-color: #ebebeb;
-  color: white;
+  color: black;
+  font-size: large;
 }
-.name:hover {
+/* .name:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .email {
   background-color: #ebebeb;
-  height: 2em;
+  font-size: large;
+
+  
 }
 
-.email:hover {
+/* .email:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .message {
   background-color: #ebebeb;
   overflow: hidden;
   height: 10rem;
+  font-size: large;
 }
 
-.message:hover {
+/* .message:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 12em;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .formEntry {
   display: block;

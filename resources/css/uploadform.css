@@ -187,7 +187,7 @@
   right: 0;
   border-top: 5px solid var(--avocado-green);
 /*   z-index: 1; */
-  animation: bounce 1.5s infinite;
+  animation: bounce 1.5s;
 }
 ::-webkit-input-placeholder {
   font-size: 1.3em;
@@ -195,16 +195,17 @@
 
 .title{
   display: block;
-  font-family: sans-serif;
   margin: 10px auto 5px;
   width: 300px;
+  font-size: large;
 }
 .termsConditions{
   margin: 0 auto 5px 80px;
+  font-size: large;
 }
 
 .pageTitle{
-  font-size: 2em;
+  font-size: x-large;
   font-weight: bold;
 }
 .secondaryTitle{
@@ -213,39 +214,43 @@
 
 .name {
   background-color: #ebebeb;
-  color: white;
+  color: black;
+  font-size: large;
 }
-.name:hover {
+/* .name:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .email {
   background-color: #ebebeb;
-  height: 2em;
+  font-size: large;
+
+  
 }
 
-.email:hover {
+/* .email:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .message {
   background-color: #ebebeb;
   overflow: hidden;
   height: 10rem;
+  font-size: large;
 }
 
-.message:hover {
+/* .message:hover {
   border-bottom: 5px solid var(--avocado-green);
   height: 12em;
   width: 380px;
   transition: ease 0.5s;
-}
+} */
 
 .formEntry {
   display: block;

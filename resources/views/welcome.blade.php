@@ -1,7 +1,7 @@
 <x-layout>
   <x-slot name="title">Presto.it</x-slot>
 
-    <main class="">
+    <main>
         @if (session('access.denied.revisor.only'))
             <div class="alert alert-danger">
                 Accesso non consentito - solo per revisori
@@ -17,7 +17,7 @@
                             <h1 class="section-title text-center display-2 fw-bold"> Presto </h1>
                         </div>
                         <div>
-                            <h3 class="text-center display-4"> {{__('ui.frase_1')}}</h3>
+                            <h3 class="text-center display-5"> {{__('ui.frase_1')}}</h3>
                         </div>
                         <div class="text-center">
                             <a class="btn bubbly-button rounded-pill fs-2"
@@ -33,20 +33,20 @@
         </section>
 
         {{-- SEZIONE PRESENTAZIONE DELLE CATEGORIE --}}
-        <section class="container  vh-100 w-100 my-5 py-5">
-            <h1 class="section-title text-center">{{__('ui.cat_h1')}}</h1>
-            <h2 class="text-center">{{__('ui.frase_2')}}</h2>
+        <section class="container my-5 py-5 cat-wrapper vh-100">
+            <h1 class=" my-3 section-title text-center">{{__('ui.cat_h1')}}</h1>
+            <h2 class=" my-5 text-center">{{__('ui.frase_2')}}</h2>
             <div class="row h-100 w-100">
-                <div class="col-12 col-md-3  h-100">
+                <div class="col-12 col-md-3">
                     <div class="row cat-immobili" >
-                        <a class="category-immobili category" href="{{ route('announcement.category', 3) }}">
+                        <a class="category-immobili category py-3" href="{{ route('announcement.category', 3) }}">
                             <h3 class="category-title">
                                 Immobili
                             </h3>
                             <div class="category-count">
                                 +340.000 annunci
                             </div>
-                            <img class="category-image-immobili" src="/media/immobili.png" alt="immobili">
+                           
                         </a>
                     </div>
                     <div class="row cat-elettronica" >
@@ -57,7 +57,7 @@
                             <div class="category-count">
                                 +150.000 annunci
                             </div>
-                            <img class="category-image-elettronica" src="/media/elettronica.png" alt="elettronica">
+                            
                         </a>
                     </div>
                 </div>
@@ -66,15 +66,13 @@
                         <a class="category category-lavoro" href="{{ route('announcement.category', 4) }}">
                             <h3 class="category-title">Lavoro</h3>
                             <div class="category-count"> +300.000 annunci </div>
-                            <img class="category-image-lavoro" src="/media/lavoro.png"
-                                alt="">
+                          
                         </a>
                     </div>
                     <div class="row cat-sport" >
                         <a class="category category-sport" href="{{ route('announcement.category', 6) }}">
                             <h3 class="category-title">Sport</h3>
                             <div class="category-count"> +500.000 annunci </div>
-                            <img class="category-image-sport" src="/media/sport.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -83,8 +81,7 @@
                         <a class="category category-musica" href="{{ route('announcement.category', 7) }}">
                             <h3 class="category-title">Musica</h3>
                             <div class="category-count"> +50.000 annunci </div>
-                            <img class="category-image-musica" src="/media/musica.png"
-                                alt="">
+                            
                         </a>
                     </div>
                 </div>
@@ -93,16 +90,14 @@
                         <div class="col-12 col-md-6 cat-vinili" >
                             <a class="category category-vinili" href="{{ route('announcement.category', 1) }}">
                                 <h3 class="category-title">Vinili</h3>
-                                <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image-vinili" src="/media/vinili.png" alt="">
+                                <div class="category-count"> +500 annunci </div>
                             </a>
                         </div>
                         <div class="col-12 col-md-6 cat-giochi">
                             <a class="category category-videogiochi" href="{{ route('announcement.category', 5) }}">
                                 <h3 class="category-title">Games</h3>
-                                <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image-videogiochi" src="/media/videogiochi.png"
-                                    alt="">
+                                <div class="category-count"> +300 annunci </div>
+                            
                             </a>
                         </div>
 
@@ -112,48 +107,12 @@
                             <a class="category category-artigianato" href="{{ route('announcement.category', 8) }}">
                                 <h3 class="category-title">Artigianato</h3>
                                 <div class="category-count"> +50.000 annunci </div>
-                                <img class="category-image" src="/media/artigianato.png" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        {{-- <section class="container-fluid py-5">
-            <h1 class="section-title text-center">{{__('ui.cat_h1')}}</h1>
-            <h2 class="text-center">{{__('ui.frase_2')}}</h2>
-            <div class="row align-items-center justify-content-center category-wrapper">
-                <div class="col-12 col-md-3 cat-col cat-col-1">
-                    <div class="row">
-                        
-                        
-                    </div>
-                </div>
-                <div class="col-12 col-md-3  cat-col cat-col-2">
-                    <div class="row">
-                        
-                        
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-3   cat-col cat-col-3">
-                    
-                </div>
-                <div class="col-12 col-md-3   cat-col cat-col-4">
-                    <div class="row cat-small-wrapper">
-                        <div class="col-12 col-md-6">
-                           
-                        </div>
-                        <div class="col-12 col-md-6">
-                           
-                        </div>
-                        <div class="col-12  d-flex justify-content-center">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
         {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
 

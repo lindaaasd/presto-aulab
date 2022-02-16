@@ -2,98 +2,34 @@
   <x-slot name="title">Register</x-slot>
 
 
-    {{-- form register --}}
-    <section>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12">
-                <div class="cont">
-                    <form class="login-form sign-in" method="POST" action="{{ route('register') }}">
-                        @csrf
-                        <h2 class="login-title">Register</h2>
-                        <label class="login-label">
-                            <span class="login-span">username</span>
-                            <input class="login-input" type="text" name="name">
-                        </label>
-                        <label class="login-label">
-                            <span class="login-span">Email Address</span>
-                            <input class="login-input" type="email" name="email">
-                        </label>
-                        <label class="login-label">
-                            <span class="login-span">Password</span>
-                            <input class="login-input" type="password" name="password">
-                        </label>
-                        <label class="login-label">
-                            <span class="login-span">Confirm password</span>
-                            <input class="login-input" type="password" name="password_confirmation">
-                        </label>
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                            <button class="login-submit text-center category-btn" type="submit">Register</button>
+  <section class="wrapper m-5">
+    <form class="form" action="{{ route('register') }}" method="POST">
+        @csrf 
+      <div class="pageTitle title"> Register </div>
+      <input type="text" class="name formEntry" placeholder="Username" name="name" />
+      <input type="email" class="email formEntry" placeholder="Email" name="email" />
+      <input type="password" class="email formEntry" placeholder="Password" name="password" />
+      <input type="password" class="email formEntry" placeholder="Confirm Password" name="password_confirmation" />
 
 
-                        </div>
-
-                        <div class="social-media">
-                            <ul>
-                                <li><img
-                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/facebook.png">
-                                </li>
-                                <li><img
-                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/twitter.png">
-                                </li>
-                                <li><img
-                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/linkedin.png">
-                                </li>
-                                <li><img
-                                        src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/instagram.png">
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-
-                    <div class="sub-cont">
-                        <div class="img">
-                            <div class="img-text m-up">
-                                <h2>New here?</h2>
-                                <p>Sign up and discover great amount of new opportunities!</p>
-                            </div>
-                            <div class="img-text m-in">
-                                <h2>One of us?</h2>
-                                <p>If you already has an account, just sign in. We've missed you!</p>
-                            </div>
-                            <div class="img-btn">
-                                <span class="m-up login-span">Sign Up</span>
-                                <span class="m-in login-span">Sign In</span>
-                            </div>
-                        </div>
-                        <div class="form sign-up">
-                            <h2 class="login-title m-3">Sign Up</h2>
-                            <label class="login-label">
-                                <span class="login-span">Name</span>
-                                <input class="login-input" type="text">
-                            </label>
-                            <label class="login-label">
-                                <span class="login-span">Email</span>
-                                <input class="login-input" type="email">
-                            </label>
-                            <label class="login-label">
-                                <span class="login-span">Password</span>
-                                <input class="login-input" type="password">
-                            </label>
-                            <label class="login-label">
-                                <span class="login-span">Confirm Password</span>
-                                <input class="login-input" type="password">
-                            </label>
-                            <div class="d-flex align-items-center justify-content-center m-5">
-                                <button type="button" class="category-btn submit text-center">Sign Up Now</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
+      <button class="submit formEntry" type="submit" onclick="thanks()">Register</button>
+      <div class="social-media">
+        <ul>
+            <li><img
+                    src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/facebook.png">
+            </li>
+            <li><img
+                    src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/twitter.png">
+            </li>
+            <li><img
+                    src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/linkedin.png">
+            </li>
+            <li><img
+                    src="https://raw.githubusercontent.com/abo-elnoUr/public-assets/master/instagram.png">
+            </li>
+        </ul>
+    </div>
+    </form>
+  </section>
 
 </x-layout>

@@ -9,54 +9,14 @@ i {
 
 /* CATEGORIE */
 
-.cat-col{
-    flex-direction: column;
-    height: 500px;
-}
-
-.cat-col-1 {
-    width:19%;
-}
-
-.cat-col-2 {
-    width:19%;
-}
-.cat-col-3 {
-    width: 19%;
-}
-.cat-col-4{
-    width: 25%;
-    margin-left: 35px;
-
-}
-
-.category {
-    position: relative;
-    padding: 20px 17px;
-}
-
-.cat-small-wrapper {
-    display: flex;
-    flex-grow: 1;
-}
-
-.category-wrapper {
-    margin: 60px;
-}
-
-.category-immobili {
-    background-color: #D2FD61;
-    color: var(--main-dark-blue)!important;
-    height: 350px;
-    width: 220px;
-    margin-bottom: 20px;
-}
-
 .category-title {
     font-weight: 500;
     position: relative;
     z-index: 1;
     font-size: xx-large;
+    text-align: start;
+    padding-left: 20px;
+    padding-top:5px;
 }
 
 .category-count {
@@ -64,156 +24,82 @@ i {
     line-height: 24px;
     letter-spacing: -.05em;
     position: relative;
-    z-index: 1; }
+    z-index: 1; 
+    padding-left: 20px;
 
-.category-image-immobili {
-    width: 200px;
-    margin-top:50px;
-    overflow: visible;
-  
-}
+  }
 
-.category-image-elettronica {
-    width: 130px;
-    left: 100px;
-  
-}
-
-.category-image-lavoro {
-    width: 130px;
-    margin-left: 30px;  
-}
-
-.category-image-sport {
-    width: 200px;
-    margin-left: 10px;  
-    margin-top: 60px;
-}
-
-.category-image-musica {
-    width: 250px;
-    rotate: x 90deg;
-}
-
-.category-image-games {
-    width: 100px;
-}
-
-.category-image-vinili {
-    width: 100px;
-}
-
-.category-image-artigianato {
-    width: 80px;
-}
-
-.category-elettronica {
-    background-color: var(--main-light-blue);
-    color: #fff!important;
-    height:150px;
-    width: 220px;
-}
-
-.City__img, .category {
+.category {
     display: block;
     border-radius: 40px;
     overflow: hidden;
 }
 
-.category-lavoro {
-    background-color: #FF89C2;
-    color: #670A6F!important;
-    height: 150px;
-    width: 220px;
-    margin-bottom: 20px;
-}
-
-.category-sport {
-    background-color: #FD6C67;
-    color: #3d282f!important;
-    height: 350px;
-    width: 220px;
-}
-
-.category-musica {
-    background-color: #385EF9;
-    color: #A3FBFF!important;
-    height: 520px;
-    width: 250px;
-}   
-
-.category-artigianato {
-    background-color: #F49709;
-    color: #A31745!important;
-    height: 350px;
-    width: 242px;
-    margin-top: 15px;
-
-}
-
-
-
 .cat-immobili{
-  height: 70%;
+  height: 50%;
   border-radius: 40px;
   margin: 10px;
   background-color: #D2FD61;
-    color: var(--main-dark-blue)!important;
+  color: var(--main-dark-blue)!important;
 }
+
 .cat-elettronica{
-  height: 30%;
+  height: 20%;
   border-radius: 40px;
   margin: 10px;
   background-color: var(--main-light-blue);
-    color: #fff!important;
+  color: #fff!important;
 }
+
 .cat-lavoro{
-  height: 40%;
+  height: 20%;
   border-radius: 40px;
   margin: 10px;
   background-color: #FF89C2;
-    color: #670A6F!important;
+  color: #670A6F!important;
 }
 .cat-sport{
-  height: 60%;
+  height: 50%;
   border-radius: 40px;
   margin: 10px;
   background-color: #FD6C67;
-    color: #3d282f!important;
+  color: #3d282f!important;
 }
+
 .cat-musica{
-  height: 100%;
+  height: 70%;
   border-radius: 40px;
   margin: 10px;
   background-color: #385EF9;
   color: #A3FBFF!important;
 }
+
 .cat-artigianato{
-  height: 70%;
+  height: 35%;
   border-radius: 40px;
   margin: 10px;
   background-color: #F49709;
   color: #A31745!important;
 }
+
 .cat-vin-job{
-  height: 30%;
+  height: 35%;
   border-radius: 40px;
   margin: 10px;
 }
+
 .cat-vinili{
   border-radius: 40px;
   background-color: #FF89C2;
-    color: #670A6F!important;
-    height: 100%;
-   
-
+  color: #670A6F!important;
+  height: 100%;
 }
+
 .cat-giochi{
   border-radius: 40px;
   background-color: #13C1AC;
-    color: #fff!important;
-    height: 100%;
-   
+  color: #fff!important;
+  height: 100%;
 
 }
 /* ULTIMI 5 ANNUNCI */

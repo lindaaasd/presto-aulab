@@ -1,7 +1,6 @@
 @import'~bootstrap/dist/css/bootstrap';
 @import'style';
 @import'mediaquery';
-@import'card';
 @import'home';
 @import'login';
 @import'uploadform';
@@ -9,8 +8,6 @@
 @import'~dropzone/dist/dropzone';
 @import '~flag-icon-css/css/flag-icons';
 @import 'swiper/css';
-
-
 
 
 :root {

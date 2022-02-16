@@ -130,16 +130,14 @@
                 @foreach ($announcements as $announcement)
                     @if ($announcement->is_accepted)
                         <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
-                            <div id="carouselWelcome" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselWelcome" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-
                                     @foreach ($announcement->images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                            <img class="img-fluid" src="{{ $image->getUrl(300, 150) }}"
+                                            <img class="img-fluid card-image" src="{{ $image->getUrl(300, 150) }}"
                                                 class="d-block" alt="https://via.placeholder.com/150">
                                         </div>
                                     @endforeach
-
                                 </div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselWelcome" data-bs-slide="prev">

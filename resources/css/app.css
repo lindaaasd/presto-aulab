@@ -8,6 +8,9 @@
 @import'~dropzone/dist/basic';
 @import'~dropzone/dist/dropzone';
 @import '~flag-icon-css/css/flag-icons';
+@import 'swiper/css';
+
+
 
 
 :root {
@@ -125,22 +128,16 @@ form-control:focus {
 }
 
 .login-nav-button { 
-  background: var(--main-dark-blue);
-  border: 0;
+  background: var(--avocado-green);
   color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
   outline: transparent;
+  font-size: large;
   text-align: center;
-  text-decoration: none;
   transition: box-shadow .2s ease-in-out;
   user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  border-radius: 40px;
+  border-radius: 50%;
 }
 
 /* BUTTON ANNUNCIO */

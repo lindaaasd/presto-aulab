@@ -2,6 +2,7 @@ require('bootstrap');
 document.Dropzone = require('dropzone');
 Dropzone.autoDiscover= false;
 document.$=document.jQuery=require('jquery');
+import Swiper from 'swiper';
 
 
 require('./announcementImages');

@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\GoogleVisionLabelImage;
-use App\Jobs\GoogleVisionSafeSearchImage;
-use App\Jobs\ResizeImage;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\AnnouncementImage;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 
 class AnnouncementController extends Controller
 {
@@ -80,11 +81,25 @@ class AnnouncementController extends Controller
                     ));
             $i->save();
 
-            dispatch(new GoogleVisionSafeSearchImage(
-                $i->id
-            ));
+            dispatch(new GoogleVisionSafeSearchImage($i->id));
             
-            dispatch(new GoogleVisionLabelImage($i->id));
+            
+            
+            $job = (new GoogleVisionSafeSearchImage($i->id));
+            $job -> withChain([
+                new GoogleVisionLabelImage($i->id),
+                new GoogleVisionRemoveFaces($i->id),
+                new ResizeImage(
+                    $i->file,
+                    300,
+                    150
+                ),
+                new ResizeImage (
+                    $i->file,
+                    400,
+                    300
+                ),
+            ])->dispatch($i->id);
     
         }
 

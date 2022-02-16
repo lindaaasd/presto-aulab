@@ -2,17 +2,20 @@
 
 namespace App\Jobs;
 
-use Illuminate\Bus\Queueable;
-
-use Spatie\Image\Manipulations;
 use App\Models\AnnouncementImage;
-use Google\Cloud\Vision\V1\Image;
+use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+use Spatie\Image\Manipulations;
+
+use Spatie\Image\Image;
+
+use Illuminate\Contracts\Queue\ShouldBeUnique;
+
+
 
 class GoogleVisionRemoveFaces implements ShouldQueue
 {
@@ -60,7 +63,7 @@ class GoogleVisionRemoveFaces implements ShouldQueue
             $w = $bounds[2][0] - $bounds[0][0];
             $h = $bounds[2][1] - $bounds[0][1];
             $image= Image::load($srcPath);
-            $image->watermark(base_path('resources/img/bomba.png'))
+            $image->watermark(base_path('public/img/bomba.png'))
                     ->watermarkPosition('top-left')
                     ->watermarkPadding($bounds[0][0], $bounds[0][1])
                     ->watermarkWidth($w, Manipulations::UNIT_PIXELS)

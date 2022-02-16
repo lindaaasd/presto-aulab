@@ -11326,6 +11326,10 @@ textarea.form-control-lg {
     }
 
 }
+.dark-blue{
+  color: var(--main-dark-blue);
+}
+
 a {
     text-decoration: none;
     color: var(--main-dark-blue);
@@ -11395,7 +11399,7 @@ i {
 }
 
 .cat-musica{
-  height: 70%;
+  height: 72%;
   border-radius: 40px;
   margin: 10px;
   background-color: #385EF9;
@@ -11420,14 +11424,17 @@ i {
   border-radius: 40px;
   background-color: #FF89C2;
   color: #670A6F!important;
-  height: 100%;
+  height: 50%;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .cat-giochi{
   border-radius: 40px;
   background-color: #13C1AC;
   color: #fff!important;
-  height: 100%;
+  height: 50%;
+  width: 100%;
 
 }
 /* ULTIMI 5 ANNUNCI */
@@ -11479,7 +11486,7 @@ i {
     -moz-appearance: none;
          appearance: none;
     background-color: var(--avocado-green);
-    color: black;
+    color: white;
     border-radius: 4px;
     border: none;
     cursor: pointer;

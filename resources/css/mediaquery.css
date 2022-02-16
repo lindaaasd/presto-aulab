@@ -23,4 +23,13 @@
 
 }
 
+@media only screen and (min-width: 375px){
 
+    .category-wrapper {
+        margin: auto;
+    }
+
+    .category-videogiochi  {
+        margin-right: 0px !important;
+    }
+}

@@ -59,7 +59,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
                     <div class="row">
                         <a class="category category-lavoro" href="{{ route('announcement.category', 4) }}">
                             <h3 class="category-title">Lavoro</h3>
@@ -75,7 +75,7 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
                     <a class="category category-musica" href="{{ route('announcement.category', 7) }}">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
@@ -83,7 +83,7 @@
                             alt="">
                     </a>
                 </div>
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
                     <div class="row cat-small-wrapper">
                         <div class="col-12 col-md-6">
                             <a class="category category-videogiochi" href="{{ route('announcement.category', 5) }}">
@@ -93,14 +93,14 @@
                                     alt="">
                             </a>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                             <a class="category category-vinili" href="{{ route('announcement.category', 1) }}">
                                 <h3 class="category-title">Vinili</h3>
                                 <div class="category-count"> +50.000 annunci </div>
                                 <img class="category-image-vinili" src="/media/vinili.png" alt="">
                             </a>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
                             <a class="category category-artigianato" href="{{ route('announcement.category', 8) }}">
                                 <h3 class="category-title">Artigianato</h3>
                                 <div class="category-count"> +50.000 annunci </div>

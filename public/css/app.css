@@ -11326,7 +11326,16 @@ textarea.form-control-lg {
 
 }
 
+@media only screen and (min-width: 375px){
 
+    .category-wrapper {
+        margin: auto;
+    }
+
+    .category-videogiochi  {
+        margin-right: 0px !important;
+    }
+}
 
 /* CSS reset */
 *,
@@ -11751,7 +11760,7 @@ i {
     background-color: #F49709;
     color: #A31745!important;
     height: 350px;
-    width: 310px;
+    width: 242px;
     margin-top: 15px;
 
 }

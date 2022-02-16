@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot name="title">Contact</x-slot>
       <div class="wrapper m-5">
         <form class="form" action="{{route('contact.submit')}}" method="POST">
             @csrf 

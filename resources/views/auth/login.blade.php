@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot name="title">Log In</x-slot>
     <section class="container-fluid my-5 p-5">
         <div class="row align-items-center justify-content-center">
             <div class="col-12">

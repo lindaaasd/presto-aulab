@@ -1,5 +1,5 @@
 <x-layout>
-
+  <x-slot name="title">Revisore</x-slot>
     @if ($announcement)
 
         <section class="container">

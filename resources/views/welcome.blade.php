@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot name="title">Presto.it</x-slot>
 
     <main class="">
         {{-- @if ($message->any())
@@ -26,12 +27,11 @@
                             <h1 class="section-title text-center display-2 fw-bold"> Presto </h1>
                         </div>
                         <div>
-                            <h3 class="text-center display-4"> something inspirational and buy worthy </h3>
+                            <h3 class="text-center display-4"> {{__('ui.frase_1')}}</h3>
                         </div>
                         <div class="text-center">
                             <a class="btn bubbly-button rounded-pill fs-2"
-                                href="{{ route('announcement.form') }}">inserisci
-                                annuncio</a>
+                                href="{{ route('announcement.form') }}">{{__('ui.ins_ad')}}</a>
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
 
         {{-- SEZIONE PRESENTAZIONE DELLE CATEGORIE --}}
         <section class="container-fluid py-5">
-            <h1 class="section-title text-center"> Le nostre categorie </h1>
-            <h2 class="text-center"> Lasciati ispirare dalle categorie più ricercate su Presto.it </h2>
+            <h1 class="section-title text-center">{{__('ui.cat_h1')}}</h1>
+            <h2 class="text-center">{{__('ui.frase_2')}}</h2>
             <div class="row align-items-center justify-content-center category-wrapper">
                 <div class="col-6 col-md-3 cat-col cat-col-1">
                     <div class="row">
@@ -125,7 +125,7 @@
         {{-- SEZIONE CON GLI ULTIMI 5 ANNUNCI --}}
 
         <section class="container-fluid p-5">
-            <h1 class="section-title text-center py-5"> I nostri ultimmi annunci </h1>
+            <h1 class="section-title text-center py-5">{{__('ui.lastAds')}}</h1>
             <div class="row align-items-center justify-content-center">
                 @foreach ($announcements as $announcement)
                     @if ($announcement->is_accepted)

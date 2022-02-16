@@ -25,7 +25,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <title>Presto</title>
+    <title>{{$title ?? ""}}</title>
+    <link rel="icon" type="image/x-icon" href="/img/avocado.png">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 

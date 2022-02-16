@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="title">Inserire un annuncio</x-slot>
 
 
     <section class="container d-flex justify-content-center m-5">

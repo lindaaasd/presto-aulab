@@ -1,5 +1,5 @@
 <x-layout>
-
+  <x-slot name="title">Dettagli annuncio</x-slot>
     <section class="container-fluid m-5 p-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 d-flex justify-content-center">

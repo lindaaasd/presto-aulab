@@ -24,7 +24,7 @@
             <div class="nav-search col-12 col-md-6 justify-content-between align-items-center">
                 <form method="GET" action="{{ route('search') }}" class="d-flex ms-5 w-50">
                     <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn search-btn" type="submit">Search</button>
+                    <button class="btn search-btn" type="submit">{{__('ui.search')}}</button>
                 </form>
 
                 <div class="row align-items-center justify-content-end w-100">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <a href="{{route('contact-form')}}" class="fs-3"> Contact us </a>
+                        <a href="{{route('contact-form')}}" class="fs-3">{{__('ui.contact')}}</a>
                     </div>
                 
                     <div class="col-3 me-3">

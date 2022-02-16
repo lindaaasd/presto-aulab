@@ -2,16 +2,6 @@
   <x-slot name="title">Presto.it</x-slot>
 
     <main class="">
-        {{-- @if ($message->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($message->all() as $message)
-                        <li>{{ $message }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif --}}
-
         @if (session('access.denied.revisor.only'))
             <div class="alert alert-danger">
                 Accesso non consentito - solo per revisori
@@ -35,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 text-center">
                     <img src="https://assets.website-files.com/5ec440af4659932990a1020c/6126238e144f7970c00d7c57_60f17a27f09c3f9cecf7ef53_footer-avatar.png"
                         alt="">
                 </div>
@@ -47,7 +37,7 @@
             <h1 class="section-title text-center">{{__('ui.cat_h1')}}</h1>
             <h2 class="text-center">{{__('ui.frase_2')}}</h2>
             <div class="row align-items-center justify-content-center category-wrapper">
-                <div class="col-6 col-md-3 cat-col cat-col-1">
+                <div class="col-12 col-md-3">
                     <div class="row">
                         <a class="category-immobili category" href="{{ route('announcement.category', 3) }}">
                             <h3 class="category-title">
@@ -69,7 +59,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 cat-col cat-col-2">
+                <div class="col-12 col-md-3">
                     <div class="row">
                         <a class="category category-lavoro" href="{{ route('announcement.category', 4) }}">
                             <h3 class="category-title">Lavoro</h3>
@@ -85,7 +75,7 @@
 
                     </div>
                 </div>
-                <div class="col-6 col-md-3 cat-col cat-col-3">
+                <div class="col-12 col-md-3">
                     <a class="category category-musica" href="{{ route('announcement.category', 7) }}">
                         <h3 class="category-title">Musica</h3>
                         <div class="category-count"> +50.000 annunci </div>
@@ -93,7 +83,7 @@
                             alt="">
                     </a>
                 </div>
-                <div class="col-6 col-md-3 cat-col cat-col-4">
+                <div class="col-12 col-md-3">
                     <div class="row cat-small-wrapper">
                         <div class="col-12 col-md-6">
                             <a class="category category-videogiochi" href="{{ route('announcement.category', 5) }}">
@@ -129,7 +119,7 @@
             <div class="row align-items-center justify-content-center">
                 @foreach ($announcements as $announcement)
                     @if ($announcement->is_accepted)
-                        <div class="col-6 col-md-3 card-annunci mx-5 d-flex justify-content-center">
+                        <div class="col-6 col-md-3 card-annunci m-5 d-flex justify-content-center">
                             <div id="carouselWelcome" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     @foreach ($announcement->images as $key => $image)
